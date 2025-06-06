@@ -9,6 +9,6 @@
 "episodes/Error_bank.Rmd" "0648cb746c2051bace7ec5ceff72773a" "site/built/Error_bank.md" "2025-06-06"
 "instructors/instructor-notes.md" "5cf113fd22defb29d17b64597f3c9bc0" "site/built/instructor-notes.md" "2025-06-06"
 "learners/reference.md" "74841bf1eb60d1265a81891a50fb6e07" "site/built/reference.md" "2025-06-06"
-"learners/setup.md" "25f6d31f611c1a17e3a22170a04b9188" "site/built/setup.md" "2025-06-06"
+"learners/setup.md" "80201a68314a94d9c23d3e2d96a38e5b" "site/built/setup.md" "2025-06-06"
 "profiles/learner-profiles.md" "5fe5bf7537072422b91ed393ada03f9a" "site/built/learner-profiles.md" "2025-06-06"
 "renv/profiles/lesson-requirements/renv.lock" "a30839a3106d76bc81a9e397a15a36d3" "site/built/renv.lock" "2025-06-06"
