@@ -129,7 +129,7 @@ library(cowplot)
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_errores.html)
+[![](fig/dudas.png){width="100"}](https://joskerus.github.io/EpiTKit-EN/Error_bank.html)
 
 </center>
 
@@ -222,7 +222,7 @@ TIME <- 1               # Number of years to be simulated. For this exercise, we
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_errores.html)
+[![](fig/dudas.png){width="100"}](https://joskerus.github.io/EpiTKit-EN/Error_bank.html)
 
 </center>
 
@@ -365,7 +365,7 @@ zika_model <- function(time, state_variable, parameters) {
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_errores.html)
+[![](fig/dudas.png){width="100"}](https://joskerus.github.io/EpiTKit-EN/Error_bank.html)
 
 </center>
 
@@ -458,7 +458,7 @@ start <- c(Sh = Nh,        # Population of susceptible humans before the start o
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_errores.html)
+[![](fig/dudas.png){width="100"}](https://joskerus.github.io/EpiTKit-EN/Error_bank.html)
 
 </center>
 
@@ -516,7 +516,7 @@ out <- ode(y = start ,
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_errores.html)
+[![](fig/dudas.png){width="100"}](https://joskerus.github.io/EpiTKit-EN/Error_bank.html)
 
 </center>
 
@@ -571,7 +571,7 @@ out <- ode(y = start ,
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_errores.html)
+[![](fig/dudas.png){width="100"}](https://joskerus.github.io/EpiTKit-EN/Error_bank.html)
 
 </center>
 
@@ -771,7 +771,7 @@ plot_grid(p1, p2, p3, ncol = 2)
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_errores.html)
+[![](fig/dudas.png){width="100"}](https://joskerus.github.io/EpiTKit-EN/Error_bank.html)
 
 </center>
 
