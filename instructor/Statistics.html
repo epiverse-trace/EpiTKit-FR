@@ -309,7 +309,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Statistics and Probability Unit</h1>
-        <p>Last updated on 2025-06-06 |
+        <p>Last updated on 2025-06-13 |
 
         <a href="https://github.com/joskerus/EpiTKit-EN/edit/main/episodes/Statistics.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -415,20 +415,65 @@ installed, run the code below according to your need:</p>
 <span></span>
 <span><span class="co"># To install the cfr package if you don't have it (or are unsure if you have it), run the following code</span></span>
 <span></span>
-<span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw">require</span><span class="op">(</span><span class="st">"cfr"</span><span class="op">)</span><span class="op">)</span> <span class="fu">install.packages</span><span class="op">(</span><span class="st">"cfr"</span><span class="op">)</span></span>
-<span></span>
-<span></span>
-<span></span>
-<span><span class="co">#Before start and eveytime that you start a session in R charge this libraries </span></span>
+<span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw">require</span><span class="op">(</span><span class="st">"cfr"</span><span class="op">)</span><span class="op">)</span> <span class="fu">install.packages</span><span class="op">(</span><span class="st">"cfr"</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#Before start and eveytime that you start a session in R charge this libraries </span></span>
 <span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
-<span><span class="kw">library</span><span class="op">(</span><span class="va">dplyr</span><span class="op">)</span></span>
-<span><span class="kw">library</span><span class="op">(</span><span class="va">epiparameter</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">dplyr</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">epiparameter</span><span class="op">)</span></span>
 <span><span class="kw">library</span><span class="op">(</span><span class="va">epitools</span><span class="op">)</span></span>
-<span><span class="kw">library</span><span class="op">(</span><span class="va">infer</span><span class="op">)</span></span>
-<span><span class="kw">library</span><span class="op">(</span><span class="va">cfr</span><span class="op">)</span></span></code></pre>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">infer</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>
+Attaching package: 'infer'</code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>The following object is masked from 'package:epiparameter':
+
+    generate</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">cfr</span><span class="op">)</span></span></code></pre>
 </div>
 <center>
-<p><a href="https://epiverse-trace.github.io/epiverse-trace/Error_bank.html" class="external-link"><img src="../fig/dudas.png" width="100" class="figure"></a></p>
+<p><a href="https://joskerus.github.io/EpiTKit-EN/Error_bank.html" class="external-link"><img src="../fig/dudas.png" width="100" class="figure"></a></p>
 </center>
 </section><section><h2 class="section-heading" id="topic-2-descriptive-statistics"><strong>Topic 2: Descriptive Statistics</strong><a class="anchor" aria-label="anchor" href="#topic-2-descriptive-statistics"></a></h2>
 <hr class="half-width"><p><strong>Exercise: Visualising and Analysing Data in R</strong></p>
@@ -441,7 +486,7 @@ for this exercise can be found in: <a href="https://raw.githubusercontent.com/ep
 <li><p>Once you have the data downloaded to your computer and in the
 data folder of your project you can execute the following
 command:</p></li>
-</ul><div class="codewrapper sourceCode" id="cb2">
+</ul><div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -458,7 +503,7 @@ the absolute frequency, relative frequency or density on the y-axis. A
 density histogram adjusts the relative frequency of each interval
 according to the width of the interval. In R it can be constructed as
 follows:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -469,11 +514,11 @@ follows:</p>
 <span>     title <span class="op">=</span> <span class="st">"Age Distribution"</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="error" tabindex="0"><code>Error in ggplot(sample_data, aes(x = age)): could not find function "ggplot"</code></pre>
+<pre class="output" tabindex="0"><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb5">
+<figure><img src="../fig/Statistics-rendered-unnamed-chunk-4-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -486,11 +531,11 @@ follows:</p>
 <span>       title <span class="op">=</span> <span class="st">"Age Distribution"</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="error" tabindex="0"><code>Error in ggplot(sample_data, aes(x = age)): could not find function "ggplot"</code></pre>
+<pre class="output" tabindex="0"><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
-<p>The <strong>Boxplot</strong> are constructed by displaying the
+<figure><img src="../fig/Statistics-rendered-unnamed-chunk-5-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>The <strong>Boxplot</strong> are constructed by displaying the
 following statistics horizontally or vertically:</p>
 <ul><li><p>First quartile Q1 (25th percentile): Value below the 25th
 percentile of the data. “First Line”.</p></li>
@@ -541,7 +586,7 @@ left-hand side. It is recommended to describe the data by median and
 interquartile range.</p></li>
 </ul><p>Next, we will visualise the age of the COVID-19 cases using a
 boxplot.</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -551,18 +596,13 @@ boxplot.</p>
 <span>  <span class="fu">geom_boxplot</span><span class="op">(</span>outlier.shape <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ylab</span><span class="op">(</span><span class="st">"Age (in years)"</span><span class="op">)</span> <span class="op">+</span> <span class="fu">xlab</span><span class="op">(</span><span class="st">" "</span><span class="op">)</span></span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="error" tabindex="0"><code>Error in ggplot(sample_data, aes(x = " ", y = age)): could not find function "ggplot"</code></pre>
-</div>
-<p>According to the boxplot of the age of the sample of COVID-19 cases
+<figure><img src="../fig/Statistics-rendered-unnamed-chunk-6-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>According to the boxplot of the age of the sample of COVID-19 cases
 it is possible to conclude that the distribution of the data is
 positively skewed, since there is a greater closeness between the values
 of Q1 and the median, so it is advisable to describe the behaviour of
 the data by means of the median and interquartile range, this in R can
 be found as follows using the functions highlighted in blue:</p>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -577,9 +617,10 @@ be found as follows using the functions highlighted in blue:</p>
 <span>  P75 <span class="op">=</span> <span class="fu">quantile</span><span class="op">(</span><span class="va">age</span>, <span class="fl">0.75</span><span class="op">)</span><span class="op">)</span> <span class="co"># 75th percentile</span></span></code></pre>
 </div>
 <div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="error" tabindex="0"><code>Error in sample_data %&gt;% dplyr::summarise(n = n(), Mean = mean(age), SD = sd(age), : could not find function "%&gt;%"</code></pre>
+<pre class="output" tabindex="0"><code>       n     Mean       SD median P25 P75
+1 100000 41.99912 19.51872     39  28  55</code></pre>
 </div>
 <p>Finally, for the variable age it can be concluded that half of the
 patients with covid-19 are aged between 27 and 52 years (“RIQ”) with a
@@ -588,7 +629,7 @@ this value. It is important to note that, due to the skewness of the
 distribution, the mean and median do not coincide, which is expected in
 skewed distributions.</p>
 <center>
-<p><a href="https://epiverse-trace.github.io/epiverse-trace/Error_bank.html" class="external-link"><img src="../fig/dudas.png" width="100" class="figure"></a></p>
+<p><a href="https://joskerus.github.io/EpiTKit-EN/Error_bank.html" class="external-link"><img src="../fig/dudas.png" width="100" class="figure"></a></p>
 </center>
 <p><strong>Bar Graphs and Frequency Tables</strong></p>
 <p>Qualitative variables are recommended to be represented by bar
@@ -598,7 +639,7 @@ relative or percentage frequencies according to the needs, i.e. it is
 always necessary to first evaluate the frequency table of the variable.
 Let us suppose that we want to know the type of infection of COVID-19.
 This can be done in R using the following command:</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -607,140 +648,22 @@ This can be done in R using the following command:</p>
 <span><span class="va">table</span> <span class="op">&lt;-</span> <span class="va">sample_data</span> <span class="op">%&gt;%</span> <span class="co"># Frequency Table Created</span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu">count</span><span class="op">(</span><span class="va">type_of_contagion</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="co"># Frequency count for the state variable</span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu">mutate</span><span class="op">(</span>prop <span class="op">=</span> <span class="fu">base</span><span class="fu">::</span><span class="fu">prop.table</span><span class="op">(</span><span class="va">n</span><span class="op">)</span>, <span class="co"># Proportion</span></span>
-<span>                perc <span class="op">=</span> <span class="fu">base</span><span class="fu">::</span><span class="fu">prop.table</span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">*</span><span class="fl">100</span><span class="op">)</span> <span class="co"># Percentage</span></span></code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="error" tabindex="0"><code>Error in sample_data %&gt;% dplyr::count(type_of_contagion) %&gt;% dplyr::mutate(prop = base::prop.table(n), : could not find function "%&gt;%"</code></pre>
-</div>
-<div class="codewrapper sourceCode" id="cb13">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">table</span></span></code></pre>
+<span>                perc <span class="op">=</span> <span class="fu">base</span><span class="fu">::</span><span class="fu">prop.table</span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">*</span><span class="fl">100</span><span class="op">)</span> <span class="co"># Percentage</span></span>
+<span></span>
+<span><span class="va">table</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>function (..., exclude = if (useNA == "no") c(NA, NaN), useNA = c("no",
-    "ifany", "always"), dnn = list.names(...), deparse.level = 1)
-{
-    list.names &lt;- function(...) {
-        l &lt;- as.list(substitute(list(...)))[-1L]
-        if (length(l) == 1L &amp;&amp; is.list(..1) &amp;&amp; !is.null(nm &lt;- names(..1)))
-            return(nm)
-        nm &lt;- names(l)
-        fixup &lt;- if (is.null(nm))
-            seq_along(l)
-        else nm == ""
-        dep &lt;- vapply(l[fixup], function(x) switch(deparse.level +
-            1, "", if (is.symbol(x)) as.character(x) else "",
-            deparse(x, nlines = 1)[1L]), "")
-        if (is.null(nm))
-            dep
-        else {
-            nm[fixup] &lt;- dep
-            nm
-        }
-    }
-    miss.use &lt;- missing(useNA)
-    miss.exc &lt;- missing(exclude)
-    useNA &lt;- if (miss.use &amp;&amp; !miss.exc &amp;&amp; !match(NA, exclude,
-        nomatch = 0L))
-        "ifany"
-    else match.arg(useNA)
-    doNA &lt;- useNA != "no"
-    if (!miss.use &amp;&amp; !miss.exc &amp;&amp; doNA &amp;&amp; match(NA, exclude,
-        nomatch = 0L))
-        warning("'exclude' containing NA and 'useNA' != \"no\"' are a bit contradicting")
-    args &lt;- list(...)
-    if (length(args) == 1L &amp;&amp; is.list(args[[1L]])) {
-        args &lt;- args[[1L]]
-        if (length(dnn) != length(args))
-            dnn &lt;- paste(dnn[1L], seq_along(args), sep = ".")
-    }
-    if (!length(args))
-        stop("nothing to tabulate")
-    bin &lt;- 0L
-    lens &lt;- NULL
-    dims &lt;- integer()
-    pd &lt;- 1L
-    dn &lt;- NULL
-    for (a in args) {
-        if (is.null(lens))
-            lens &lt;- length(a)
-        else if (length(a) != lens)
-            stop("all arguments must have the same length")
-        fact.a &lt;- is.factor(a)
-        if (doNA)
-            aNA &lt;- anyNA(a)
-        if (!fact.a) {
-            a0 &lt;- a
-            op &lt;- options(warn = 2)
-            on.exit(options(op))
-            a &lt;- factor(a, exclude = exclude)
-            options(op)
-        }
-        add.na &lt;- doNA
-        if (add.na) {
-            ifany &lt;- (useNA == "ifany")
-            anNAc &lt;- anyNA(a)
-            add.na &lt;- if (!ifany || anNAc) {
-                ll &lt;- levels(a)
-                if (add.ll &lt;- !anyNA(ll)) {
-                  ll &lt;- c(ll, NA)
-                  TRUE
-                }
-                else if (!ifany &amp;&amp; !anNAc)
-                  FALSE
-                else TRUE
-            }
-            else FALSE
-        }
-        if (add.na)
-            a &lt;- factor(a, levels = ll, exclude = NULL)
-        else ll &lt;- levels(a)
-        a &lt;- as.integer(a)
-        if (fact.a &amp;&amp; !miss.exc) {
-            ll &lt;- ll[keep &lt;- which(match(ll, exclude, nomatch = 0L) ==
-                0L)]
-            a &lt;- match(a, keep)
-        }
-        else if (!fact.a &amp;&amp; add.na) {
-            if (ifany &amp;&amp; !aNA &amp;&amp; add.ll) {
-                ll &lt;- ll[!is.na(ll)]
-                is.na(a) &lt;- match(a0, c(exclude, NA), nomatch = 0L) &gt;
-                  0L
-            }
-            else {
-                is.na(a) &lt;- match(a0, exclude, nomatch = 0L) &gt;
-                  0L
-            }
-        }
-        nl &lt;- length(ll)
-        dims &lt;- c(dims, nl)
-        if (prod(dims) &gt; .Machine$integer.max)
-            stop("attempt to make a table with &gt;= 2^31 elements")
-        dn &lt;- c(dn, list(ll))
-        bin &lt;- bin + pd * (a - 1L)
-        pd &lt;- pd * nl
-    }
-    names(dn) &lt;- dnn
-    bin &lt;- bin[!is.na(bin)]
-    if (length(bin))
-        bin &lt;- bin + 1L
-    y &lt;- array(tabulate(bin, pd), dims, dimnames = dn)
-    class(y) &lt;- "table"
-    y
-}
-&lt;bytecode: 0x55b9dc0130c0&gt;
-&lt;environment: namespace:base&gt;</code></pre>
+<pre class="output" tabindex="0"><code>  type_of_contagion     n    prop   perc
+1         Community 69985 0.69985 69.985
+2          Imported    63 0.00063  0.063
+3           Unknown 29952 0.29952 29.952</code></pre>
 </div>
 <p>With this information it can be concluded that 70% of the covid-19
 cases were from the community and only 0.06% were imported from
 elsewhere. This can be visualised by means of a bar chart:</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -750,13 +673,8 @@ elsewhere. This can be visualised by means of a bar chart:</p>
 <span>  <span class="fu">geom_bar</span><span class="op">(</span>stat<span class="op">=</span><span class="st">"identity"</span>, color<span class="op">=</span><span class="st">"darkblue"</span>, fill<span class="op">=</span><span class="st">"lightblue"</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu">labs</span><span class="op">(</span>y <span class="op">=</span> <span class="st">"%"</span>, x <span class="op">=</span> <span class="st">" "</span>, title <span class="op">=</span> <span class="st">"Type of Contagion"</span><span class="op">)</span></span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="error" tabindex="0"><code>Error in ggplot(data = table, aes(x = type_of_contagion, y = perc)): could not find function "ggplot"</code></pre>
-</div>
-<center>
-<p><a href="https://epiverse-trace.github.io/epiverse-trace/Error_bank.html" class="external-link"><img src="../fig/dudas.png" width="100" class="figure"></a></p>
+<figure><img src="../fig/Statistics-rendered-unnamed-chunk-9-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><center>
+<p><a href="https://joskerus.github.io/EpiTKit-EN/Error_bank.html" class="external-link"><img src="../fig/dudas.png" width="100" class="figure"></a></p>
 </center>
 </section><section><h2 class="section-heading" id="topic-3-probability"><strong>Topic 3: Probability</strong><a class="anchor" aria-label="anchor" href="#topic-3-probability"></a></h2>
 <hr class="half-width"><p>In a study published in the NEJM in 2014 entitled “Ebola Virus
@@ -780,7 +698,7 @@ older is 1.20 times the risk of death in cases aged 44 years or younger,
 with a 95% confidence interval of 1.13 to 1.27, and a p-value of less
 than 0.01. To reproduce this calculation you can use
 the<strong>epitools</strong> library as shown below.</p>
-<div class="codewrapper sourceCode" id="cb17">
+<div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -824,7 +742,7 @@ attr(,"method")
 <p>An introduction to statistical inference and confidence intervals can
 be found in Topic 5 of this Unit.</p>
 <center>
-<p><a href="https://epiverse-trace.github.io/epiverse-trace/Error_bank.html" class="external-link"><img src="../fig/dudas.png" width="100" class="figure"></a></p>
+<p><a href="https://joskerus.github.io/EpiTKit-EN/Error_bank.html" class="external-link"><img src="../fig/dudas.png" width="100" class="figure"></a></p>
 </center>
 </section><section><h2 class="section-heading" id="topic-4-principal-probability-distributions"><strong>Topic 4: Principal probability distributions</strong><a class="anchor" aria-label="anchor" href="#topic-4-principal-probability-distributions"></a></h2>
 <hr class="half-width"><p>As described in Topic 3, probability studies the behaviour of random
@@ -835,7 +753,7 @@ can happen in the sample space.</p>
 <p>For the explanation and examples of the main distributions, it is
 important that you install and load the packages
 <strong>epiparameter</strong> packages from Epiverse.</p>
-<div class="codewrapper sourceCode" id="cb19">
+<div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -871,7 +789,7 @@ following expression needs to be calculated:</p>
 <p><span class="math inline">\(P(X≤10)=∑_(x=0)^10 (20 x ) 〖0.60〗^x
 (1-0.60)^(20-x)\)</span></p>
 <p>In R this can be calculated as follows:</p>
-<div class="codewrapper sourceCode" id="cb20">
+<div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -952,7 +870,7 @@ day 2, i.e:</p>
 *5)^{10}}{10!}\)</span></p>
 <p><strong>In R we could find this out by varying different values of
 the number of reproduction number (R) as follows:</strong></p>
-<div class="codewrapper sourceCode" id="cb22">
+<div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -979,29 +897,25 @@ the number of reproduction number (R) as follows:</strong></p>
 <span><span class="co"># Find the most probable reproduction number</span></span>
 <span><span class="va">most_probable_number</span> <span class="op">&lt;-</span> <span class="va">results_data</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="fu">filter</span><span class="op">(</span><span class="va">poisson_results</span> <span class="op">==</span> <span class="fu">max</span><span class="op">(</span><span class="va">poisson_results</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">pull</span><span class="op">(</span><span class="va">reproduction_numbers</span><span class="op">)</span></span></code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="error" tabindex="0"><code>Error in results_data %&gt;% filter(poisson_results == max(poisson_results)) %&gt;% : could not find function "%&gt;%"</code></pre>
-</div>
-<div class="codewrapper sourceCode" id="cb24">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Create the plot with ggplot2</span></span>
+<span>  <span class="fu">pull</span><span class="op">(</span><span class="va">reproduction_numbers</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co"># Create the plot with ggplot2</span></span>
 <span><span class="fu">ggplot</span><span class="op">(</span><span class="va">results_data</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">reproduction_numbers</span>, y <span class="op">=</span> <span class="va">poisson_results</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_line</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_vline</span><span class="op">(</span>xintercept <span class="op">=</span> <span class="va">most_probable_number</span>, color <span class="op">=</span> <span class="st">"red"</span>, size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">labs</span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Probability"</span>, x <span class="op">=</span> <span class="st">"Reproduction Number (R)"</span>, title <span class="op">=</span> <span class="st">"Poisson Model"</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">WARNING<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="error" tabindex="0"><code>Error in ggplot(results_data, aes(x = reproduction_numbers, y = poisson_results)): could not find function "ggplot"</code></pre>
+<pre class="warning" tabindex="0"><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.
+This warning is displayed once every 8 hours.
+Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+generated.</code></pre>
 </div>
-<p>Therefore, if the number of secondary cases behaves according to a
+<figure><img src="../fig/Statistics-rendered-unnamed-chunk-13-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>Therefore, if the number of secondary cases behaves according to a
 Poisson distribution, there is a high probability that the number of new
 cases observed on day 2 were generated with a reproduction number of
 R=2. This implies that the average number of secondary cases per primary
@@ -1060,7 +974,7 @@ the <code>epiparameter</code> which is a package available at
 <code>R</code> which compiles the main estimates for several
 epidemiological parameters of interest in the study of infectious
 diseases.</p>
-<div class="codewrapper sourceCode" id="cb26">
+<div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1079,7 +993,7 @@ the effect of individual variation on disease emergence." _Nature_.
 doi:10.1038/nature04153 &lt;https://doi.org/10.1038/nature04153&gt;..
 To retrieve the citation use the 'get_citation' function</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb28">
+<div class="codewrapper sourceCode" id="cb30">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1104,14 +1018,14 @@ Parameters:
 the number of secondary SARS cases in order to suggest control measures.
 This is also available in the <code>epiparameter</code> with the
 function <code>plot</code>.</p>
-<div class="codewrapper sourceCode" id="cb30">
+<div class="codewrapper sourceCode" id="cb32">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Plot the retrieved epidemiological parameter for SARS</span></span>
 <span><span class="fu">plot</span><span class="op">(</span><span class="va">SARS_R</span><span class="op">)</span>  </span></code></pre>
 </div>
-<figure><img src="../fig/Statistics-rendered-unnamed-chunk-14-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>Finally, it is possible to conclude that most cases infected with
+<figure><img src="../fig/Statistics-rendered-unnamed-chunk-15-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>Finally, it is possible to conclude that most cases infected with
 SARS do not spread the disease since the mode of the distribution is
 <span class="math inline">\(0\)</span>. This result is expected given
 that <span class="math inline">\(k&lt;1\)</span> indicating that the
@@ -1153,7 +1067,7 @@ written as:</p>
 <p><span class="math inline">\(X \sim Geom(p=0.613)\)</span></p>
 <p>In R we could simulate the behaviour of the number of secondary cases
 with the following code:</p>
-<div class="codewrapper sourceCode" id="cb31">
+<div class="codewrapper sourceCode" id="cb33">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1173,12 +1087,7 @@ with the following code:</p>
 <span>  <span class="fu">geom_bar</span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"identity"</span><span class="op">)</span> <span class="op">+</span>  <span class="co"># Use a bar plot to visualize the probability distribution</span></span>
 <span>  <span class="fu">labs</span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Probability"</span>, x <span class="op">=</span> <span class="st">"Secondary cases"</span>, title <span class="op">=</span> <span class="st">"Geometric Distribution"</span><span class="op">)</span>  <span class="co"># Add labels and title</span></span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="error" tabindex="0"><code>Error in ggplot(data = data_geom, aes(x = x, y = probg)): could not find function "ggplot"</code></pre>
-</div>
-<p>Under the geometric distribution, then there is a higher probability
+<figure><img src="../fig/Statistics-rendered-unnamed-chunk-16-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>Under the geometric distribution, then there is a higher probability
 that a primary case can transmit the virus since the probability of a
 primary case generating 1,2, or more secondary cases is higher with this
 model than estimated with the negative binomial model.</p>
@@ -1215,7 +1124,7 @@ distribution between 2 and 5:</p>
 <p>For your simulation you need to generate five possible values of
 <span class="math inline">\(R_0\)</span> with equal probability, this in
 <code>R</code> is solved using the following code:</p>
-<div class="codewrapper sourceCode" id="cb33">
+<div class="codewrapper sourceCode" id="cb34">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1234,7 +1143,7 @@ distribution between 2 and 5:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] 4.630945 3.856770 4.247208 2.390477 4.449303</code></pre>
+<pre class="output" tabindex="0"><code>[1] 4.798330 4.970716 3.931566 2.548700 4.449651</code></pre>
 </div>
 </div>
 </div>
@@ -1289,7 +1198,7 @@ cases</p>
 <p>In R, we can use the function <code>pnorm()</code> function as
 follows to find:</p>
 <p><span class="math inline">\(P(X&lt;40)=?\)</span></p>
-<div class="codewrapper sourceCode" id="cb35">
+<div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1348,7 +1257,7 @@ an estimate was found of <span class="math inline">\(μ=0.660\)</span>, y
 average an infected case develops symptoms in 0.7 days. This information
 can be obtained in the epiparameter package with the following
 command:</p>
-<div class="codewrapper sourceCode" id="cb37">
+<div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1369,7 +1278,7 @@ doi:10.1016/S1473-3099(09)70069-8
 &lt;https://doi.org/10.1016/S1473-3099%2809%2970069-8&gt;..
 To retrieve the citation use the 'get_citation' function</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb39">
+<div class="codewrapper sourceCode" id="cb40">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1394,17 +1303,17 @@ Parameters:
 </div>
 <p>The complete incubation period distribution for SARS can be plotted
 by means of:</p>
-<div class="codewrapper sourceCode" id="cb41">
+<div class="codewrapper sourceCode" id="cb42">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Plot the retrieved epidemiological parameter for SARS</span></span>
 <span><span class="fu">plot</span><span class="op">(</span><span class="va">SARS_incubation</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="../fig/Statistics-rendered-unnamed-chunk-19-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>The above is useful for answering questions such as: What is the
+<figure><img src="../fig/Statistics-rendered-unnamed-chunk-20-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>The above is useful for answering questions such as: What is the
 probability that a SARS case will develop symptoms two days after
 infection?</p>
-<div class="codewrapper sourceCode" id="cb42">
+<div class="codewrapper sourceCode" id="cb43">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1453,7 +1362,7 @@ and found the following parameters:</p>
 <p><span class="math inline">\(s ∼Gamma( α=2.622,θ=0.957)\)</span></p>
 <p>This information can also be obtained from the package
 <code>epiparameter</code> with the following command:</p>
-<div class="codewrapper sourceCode" id="cb44">
+<div class="codewrapper sourceCode" id="cb45">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1475,7 +1384,7 @@ _PLoS Currents_. doi:10.1371/currents.RRN1130
 &lt;https://doi.org/10.1371/currents.RRN1130&gt;..
 To retrieve the citation use the 'get_citation' function</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb46">
+<div class="codewrapper sourceCode" id="cb47">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1499,17 +1408,17 @@ Parameters:
   shape: 2.622
   scale: 0.957</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb48">
+<div class="codewrapper sourceCode" id="cb49">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Plot the retrieved epidemiological parameter for influenza</span></span>
 <span><span class="fu">plot</span><span class="op">(</span><span class="va">influenza_s</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="../fig/Statistics-rendered-unnamed-chunk-22-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>With this information the mean and standard deviation of the
+<figure><img src="../fig/Statistics-rendered-unnamed-chunk-23-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>With this information the mean and standard deviation of the
 distribution could be found based on the application of the gamma
 distribution:</p>
-<div class="codewrapper sourceCode" id="cb49">
+<div class="codewrapper sourceCode" id="cb50">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1555,7 +1464,7 @@ the following parameters:</p>
 <p><span class="math inline">\(x∼Gamma( β=2.101,η=3.839)\)</span></p>
 <p>This information can also be obtained in the epiparameter package
 with the following command:</p>
-<div class="codewrapper sourceCode" id="cb51">
+<div class="codewrapper sourceCode" id="cb52">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1576,7 +1485,7 @@ Virus Infections." _American Journal of Epidemiology_.
 doi:10.1093/aje/kwv115 &lt;https://doi.org/10.1093/aje/kwv115&gt;..
 To retrieve the citation use the 'get_citation' function</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb53">
+<div class="codewrapper sourceCode" id="cb54">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1599,7 +1508,7 @@ Parameters:
   shape: 2.101
   scale: 3.839</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb55">
+<div class="codewrapper sourceCode" id="cb56">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1613,7 +1522,7 @@ Parameters:
 </div>
 <p>:::</p>
 <center>
-<p><a href="https://epiverse-trace.github.io/epiverse-trace/Error_bank.html" class="external-link"><img src="../fig/dudas.png" width="100" class="figure"></a></p>
+<p><a href="https://joskerus.github.io/EpiTKit-EN/Error_bank.html" class="external-link"><img src="../fig/dudas.png" width="100" class="figure"></a></p>
 </center>
 </section><section><h2 class="section-heading" id="topic-5-introduction-to-statistical-inference"><strong>Topic 5: Introduction to Statistical Inference</strong><a class="anchor" aria-label="anchor" href="#topic-5-introduction-to-statistical-inference"></a></h2>
 <hr class="half-width"><p>Statistics can be divided into two main branches: descriptive and
@@ -1636,7 +1545,7 @@ selected. This can be tested by running a simulation in R and selecting
 1000 samples of size 5 and 10, respectively. As can be seen in the
 figure below, the estimated CFRs when increasing the sample size from 5
 to 10 were more similar with a lower RIQ.</p>
-<div class="codewrapper sourceCode" id="cb57">
+<div class="codewrapper sourceCode" id="cb58">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1648,89 +1557,39 @@ to 10 were more similar with a lower RIQ.</p>
 <span></span>
 <span><span class="co"># Sample with size 5: Draw 100 random samples of size 5 (without replacement)</span></span>
 <span><span class="va">samples_n5</span> <span class="op">&lt;-</span> <span class="va">population</span> <span class="op">%&gt;%</span>  </span>
-<span>  <span class="fu">rep_sample_n</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">5</span>, reps <span class="op">=</span> <span class="fl">100</span>, replace <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>  </span></code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="error" tabindex="0"><code>Error in population %&gt;% rep_sample_n(size = 5, reps = 100, replace = FALSE): could not find function "%&gt;%"</code></pre>
-</div>
-<div class="codewrapper sourceCode" id="cb59">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Compute the Case Fatality Ratio (CFR) for each replicate in the sample size 5</span></span>
+<span>  <span class="fu">rep_sample_n</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">5</span>, reps <span class="op">=</span> <span class="fl">100</span>, replace <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>  </span>
+<span></span>
+<span><span class="co"># Compute the Case Fatality Ratio (CFR) for each replicate in the sample size 5</span></span>
 <span><span class="va">cfr_n5</span> <span class="op">&lt;-</span> <span class="va">samples_n5</span> <span class="op">%&gt;%</span>  </span>
 <span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">replicate</span><span class="op">)</span> <span class="op">%&gt;%</span>  </span>
-<span>  <span class="fu">summarise</span><span class="op">(</span>cfr <span class="op">=</span> <span class="fu">mean</span><span class="op">(</span><span class="va">dead</span><span class="op">)</span><span class="op">)</span>  </span></code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="error" tabindex="0"><code>Error in samples_n5 %&gt;% group_by(replicate) %&gt;% summarise(cfr = mean(dead)): could not find function "%&gt;%"</code></pre>
-</div>
-<div class="codewrapper sourceCode" id="cb61">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Sample with size 10: Draw 100 random samples of size 10 (without replacement)</span></span>
+<span>  <span class="fu">summarise</span><span class="op">(</span>cfr <span class="op">=</span> <span class="fu">mean</span><span class="op">(</span><span class="va">dead</span><span class="op">)</span><span class="op">)</span>  </span>
+<span></span>
+<span><span class="co"># Sample with size 10: Draw 100 random samples of size 10 (without replacement)</span></span>
 <span><span class="va">samples_n10</span> <span class="op">&lt;-</span> <span class="va">population</span> <span class="op">%&gt;%</span>  </span>
-<span>  <span class="fu">rep_sample_n</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span>, reps <span class="op">=</span> <span class="fl">100</span>, replace <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>  </span></code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="error" tabindex="0"><code>Error in population %&gt;% rep_sample_n(size = 10, reps = 100, replace = FALSE): could not find function "%&gt;%"</code></pre>
-</div>
-<div class="codewrapper sourceCode" id="cb63">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Compute the Case Fatality Ratio (CFR) for each replicate in the sample size 10</span></span>
+<span>  <span class="fu">rep_sample_n</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">10</span>, reps <span class="op">=</span> <span class="fl">100</span>, replace <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>  </span>
+<span></span>
+<span><span class="co"># Compute the Case Fatality Ratio (CFR) for each replicate in the sample size 10</span></span>
 <span><span class="va">cfr_n10</span> <span class="op">&lt;-</span> <span class="va">samples_n10</span> <span class="op">%&gt;%</span>  </span>
 <span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">replicate</span><span class="op">)</span> <span class="op">%&gt;%</span>  </span>
-<span>  <span class="fu">summarise</span><span class="op">(</span>cfr <span class="op">=</span> <span class="fu">mean</span><span class="op">(</span><span class="va">dead</span><span class="op">)</span><span class="op">)</span>  </span></code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="error" tabindex="0"><code>Error in samples_n10 %&gt;% group_by(replicate) %&gt;% summarise(cfr = mean(dead)): could not find function "%&gt;%"</code></pre>
-</div>
-<div class="codewrapper sourceCode" id="cb65">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Combine the results from both sample sizes (5 and 10)</span></span>
+<span>  <span class="fu">summarise</span><span class="op">(</span>cfr <span class="op">=</span> <span class="fu">mean</span><span class="op">(</span><span class="va">dead</span><span class="op">)</span><span class="op">)</span>  </span>
+<span></span>
+<span><span class="co"># Combine the results from both sample sizes (5 and 10)</span></span>
 <span><span class="va">cfr</span> <span class="op">&lt;-</span> <span class="fu">bind_rows</span><span class="op">(</span><span class="va">cfr_n5</span>, <span class="va">cfr_n10</span><span class="op">)</span> <span class="op">%&gt;%</span>  </span>
-<span>  <span class="fu">mutate</span><span class="op">(</span>size <span class="op">=</span> <span class="fu">factor</span><span class="op">(</span><span class="fu">c</span><span class="op">(</span><span class="fu">rep</span><span class="op">(</span><span class="fl">5</span>, <span class="fl">100</span><span class="op">)</span>, <span class="fu">rep</span><span class="op">(</span><span class="fl">10</span>, <span class="fl">100</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>  </span></code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="error" tabindex="0"><code>Error in bind_rows(cfr_n5, cfr_n10) %&gt;% mutate(size = factor(c(rep(5, : could not find function "%&gt;%"</code></pre>
-</div>
-<div class="codewrapper sourceCode" id="cb67">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Plot the sampling distribution of CFR estimates using a boxplot</span></span>
+<span>  <span class="fu">mutate</span><span class="op">(</span>size <span class="op">=</span> <span class="fu">factor</span><span class="op">(</span><span class="fu">c</span><span class="op">(</span><span class="fu">rep</span><span class="op">(</span><span class="fl">5</span>, <span class="fl">100</span><span class="op">)</span>, <span class="fu">rep</span><span class="op">(</span><span class="fl">10</span>, <span class="fl">100</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>  </span>
+<span></span>
+<span><span class="co"># Plot the sampling distribution of CFR estimates using a boxplot</span></span>
 <span><span class="fu">ggplot</span><span class="op">(</span><span class="va">cfr</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">size</span>, y <span class="op">=</span> <span class="va">cfr</span>, fill <span class="op">=</span> <span class="va">size</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>  </span>
 <span>  <span class="fu">geom_boxplot</span><span class="op">(</span>show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span>  <span class="co"># Create a boxplot without legend</span></span>
 <span>  <span class="fu">labs</span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Sample size"</span>, y <span class="op">=</span> <span class="st">"CFR estimate"</span>,  </span>
 <span>       title <span class="op">=</span> <span class="st">"Sampling Distribution of CFR Estimates"</span><span class="op">)</span> <span class="op">+</span>  <span class="co"># Add labels and title</span></span>
 <span>  <span class="fu">scale_fill_brewer</span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"Blues"</span><span class="op">)</span>  <span class="co"># Use a blue color palette for visualization</span></span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="error" tabindex="0"><code>Error in ggplot(cfr, aes(x = size, y = cfr, fill = size)): could not find function "ggplot"</code></pre>
-</div>
-<p>If we calculate the mean and standard deviation of the estimated
+<figure><img src="../fig/Statistics-rendered-unnamed-chunk-27-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>If we calculate the mean and standard deviation of the estimated
 values of the CFR with the samples of size 5 and size 10, we see that
 indeed the standard deviation of the estimates is smaller with
 increasing sample size, but in both cases on average the samples were
 closer to the true parameter value of 0.20.</p>
-<div class="codewrapper sourceCode" id="cb69">
+<div class="codewrapper sourceCode" id="cb59">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1747,9 +1606,13 @@ closer to the true parameter value of 0.20.</p>
 <span>  <span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="error" tabindex="0"><code>Error in cfr %&gt;% group_by(size) %&gt;% summarise(media = mean(cfr), sd = sd(cfr), : could not find function "%&gt;%"</code></pre>
+<pre class="output" tabindex="0"><code># A tibble: 2 × 6
+  size  media    sd mediana   P25   P75
+  &lt;fct&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1 5     0.208 0.180     0.2   0     0.4
+2 10    0.197 0.116     0.2   0.1   0.3</code></pre>
 </div>
 <p>But, if in real life we can only take a random sample, this means
 that we will only have a single chance to calculate a statistic which
@@ -1812,23 +1675,14 @@ and more efficient way as follows:</p>
 <p>As you have noticed so far, this step-by-step can become cumbersome
 because of the calculations, but in R we can obtain everything in a
 faster and more efficient way in the following way:</p>
-<div class="codewrapper sourceCode" id="cb71">
+<div class="codewrapper sourceCode" id="cb61">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Download the Ebola data from 1976</span></span>
-<span><span class="fu">data</span><span class="op">(</span><span class="va">ebola1976</span><span class="op">)</span>  </span></code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">WARNING<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="warning" tabindex="0"><code>Warning in data(ebola1976): data set 'ebola1976' not found</code></pre>
-</div>
-<div class="codewrapper sourceCode" id="cb73">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Calculate key statistics related to the Case Fatality Ratio (CFR)</span></span>
+<span><span class="fu">data</span><span class="op">(</span><span class="va">ebola1976</span><span class="op">)</span>  </span>
+<span></span>
+<span><span class="co"># Calculate key statistics related to the Case Fatality Ratio (CFR)</span></span>
 <span><span class="va">cfr_summary</span> <span class="op">&lt;-</span> <span class="va">ebola1976</span> <span class="op">%&gt;%</span>  </span>
 <span>  <span class="fu">summarise</span><span class="op">(</span>  </span>
 <span>    n <span class="op">=</span> <span class="fu">sum</span><span class="op">(</span><span class="va">cases</span><span class="op">)</span>,  <span class="co"># Total number of cases  </span></span>
@@ -1837,24 +1691,16 @@ faster and more efficient way in the following way:</p>
 <span>    error <span class="op">=</span> <span class="fu">sqrt</span><span class="op">(</span><span class="op">(</span><span class="va">cfr_est</span> <span class="op">*</span> <span class="op">(</span><span class="fl">1</span> <span class="op">-</span> <span class="va">cfr_est</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="va">n</span><span class="op">)</span>,  <span class="co"># Standard error calculation  </span></span>
 <span>    lim_inf <span class="op">=</span> <span class="va">cfr_est</span> <span class="op">-</span> <span class="fl">1.96</span> <span class="op">*</span> <span class="va">error</span>,  <span class="co"># Lower bound of the 95% confidence interval  </span></span>
 <span>    lim_sup <span class="op">=</span> <span class="va">cfr_est</span> <span class="op">+</span> <span class="fl">1.96</span> <span class="op">*</span> <span class="va">error</span>  <span class="co"># Upper bound of the 95% confidence interval  </span></span>
-<span>  <span class="op">)</span>  </span></code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="error" tabindex="0"><code>Error in ebola1976 %&gt;% summarise(n = sum(cases), deaths = sum(deaths), : could not find function "%&gt;%"</code></pre>
-</div>
-<div class="codewrapper sourceCode" id="cb75">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Print the result</span></span>
+<span>  <span class="op">)</span>  </span>
+<span></span>
+<span><span class="co"># Print the result</span></span>
 <span><span class="fu">print</span><span class="op">(</span><span class="va">cfr_summary</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="error" tabindex="0"><code>Error: object 'cfr_summary' not found</code></pre>
+<pre class="output" tabindex="0"><code>    n deaths  cfr_est      error   lim_inf   lim_sup
+1 245    234 0.955102 0.01322986 0.9291715 0.9810326</code></pre>
 </div>
 </div>
 </div>
@@ -1865,7 +1711,7 @@ the interval between 92.9% and 98.1%.</p>
 <p>The CFR package also has a built-in function to automatically
 estimate with its respective 95% interval the CFR during an epidemic by
 means of the function:</p>
-<div class="codewrapper sourceCode" id="cb77">
+<div class="codewrapper sourceCode" id="cb63">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1873,9 +1719,10 @@ means of the function:</p>
 <span><span class="fu">cfr</span><span class="fu">::</span><span class="fu">cfr_static</span><span class="op">(</span>data <span class="op">=</span> <span class="va">ebola1976</span><span class="op">)</span>  </span></code></pre>
 </div>
 <div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="error" tabindex="0"><code>Error: object 'ebola1976' not found</code></pre>
+<pre class="output" tabindex="0"><code>  severity_estimate severity_low severity_high
+1          0.955102    0.9210866     0.9773771</code></pre>
 </div>
 <p>As you can see there are slight differences between the CI
 constructed step by step and the one reported by the function.
@@ -1884,7 +1731,7 @@ construction of the CI by the method based on maximum likelihood and
 different statistical distributions according to the total number of
 cases, but the interpretation does not change.</p>
 <center>
-<p><a href="https://epiverse-trace.github.io/epiverse-trace/Error_bank.html" class="external-link"><img src="../fig/dudas.png" width="100" class="figure"></a></p>
+<p><a href="https://joskerus.github.io/EpiTKit-EN/Error_bank.html" class="external-link"><img src="../fig/dudas.png" width="100" class="figure"></a></p>
 </center>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
@@ -1978,7 +1825,7 @@ any links that you are not going to use.
   "url": "https://joskerus.github.io/EpiTKit-EN/instructor/Statistics.html",
   "identifier": "https://joskerus.github.io/EpiTKit-EN/instructor/Statistics.html",
   "dateCreated": "2024-06-04",
-  "dateModified": "2025-06-06",
+  "dateModified": "2025-06-13",
   "datePublished": "2025-06-13"
 }
 
