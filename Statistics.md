@@ -95,21 +95,55 @@ if(!require("infer")) install.packages("infer")
 # To install the cfr package if you don't have it (or are unsure if you have it), run the following code
 
 if (!require("cfr")) install.packages("cfr")
+```
 
-
-
+``` r
 #Before start and eveytime that you start a session in R charge this libraries 
 library(ggplot2)
 library(dplyr)
+```
+
+``` output
+
+Attaching package: 'dplyr'
+```
+
+``` output
+The following objects are masked from 'package:stats':
+
+    filter, lag
+```
+
+``` output
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+```
+
+``` r
 library(epiparameter)
 library(epitools)
 library(infer)
+```
+
+``` output
+
+Attaching package: 'infer'
+```
+
+``` output
+The following object is masked from 'package:epiparameter':
+
+    generate
+```
+
+``` r
 library(cfr)
 ```
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epiverse-trace/Error_bank.html)
+[![](fig/dudas.png){width="100"}](https://joskerus.github.io/EpiTKit-EN/Error_bank.html)
 
 </center>
 
@@ -151,9 +185,11 @@ ggplot(sample_data, aes(x = age)) +
    	title = "Age Distribution")
 ```
 
-``` error
-Error in ggplot(sample_data, aes(x = age)): could not find function "ggplot"
+``` output
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
+
+<img src="fig/Statistics-rendered-unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
 
 
 ``` r
@@ -166,9 +202,11 @@ ggplot(sample_data, aes(x = age)) +
        title = "Age Distribution")
 ```
 
-``` error
-Error in ggplot(sample_data, aes(x = age)): could not find function "ggplot"
+``` output
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
+
+<img src="fig/Statistics-rendered-unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 The **Boxplot** are constructed by displaying the following statistics horizontally or vertically:
 
@@ -231,9 +269,7 @@ ggplot(sample_data, aes(x = " ", y = age)) +
   ylab("Age (in years)") + xlab(" ")
 ```
 
-``` error
-Error in ggplot(sample_data, aes(x = " ", y = age)): could not find function "ggplot"
-```
+<img src="fig/Statistics-rendered-unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 
 According to the boxplot of the age of the sample of COVID-19 cases it is possible to conclude that the distribution of the data is positively skewed, since there is a greater closeness between the values of Q1 and the median, so it is advisable to describe the behaviour of the data by means of the median and interquartile range, this in R can be found as follows using the functions highlighted in blue:
 
@@ -250,8 +286,9 @@ sample_data %>% dplyr::summarise(
   P75 = quantile(age, 0.75)) # 75th percentile
 ```
 
-``` error
-Error in sample_data %>% dplyr::summarise(n = n(), Mean = mean(age), SD = sd(age), : could not find function "%>%"
+``` output
+       n     Mean       SD median P25 P75
+1 100000 41.99912 19.51872     39  28  55
 ```
 
 Finally, for the variable age it can be concluded that half of the patients with covid-19 are aged between 27 and 52 years ("RIQ") with a median of 38 years, indicating that half of the cases have an age below this value.
@@ -259,7 +296,7 @@ It is important to note that, due to the skewness of the distribution, the mean 
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epiverse-trace/Error_bank.html)
+[![](fig/dudas.png){width="100"}](https://joskerus.github.io/EpiTKit-EN/Error_bank.html)
 
 </center>
 
@@ -278,130 +315,15 @@ table <- sample_data %>% # Frequency Table Created
   dplyr::count(type_of_contagion) %>% # Frequency count for the state variable
   dplyr::mutate(prop = base::prop.table(n), # Proportion
                 perc = base::prop.table(n)*100) # Percentage
-```
 
-``` error
-Error in sample_data %>% dplyr::count(type_of_contagion) %>% dplyr::mutate(prop = base::prop.table(n), : could not find function "%>%"
-```
-
-``` r
 table
 ```
 
 ``` output
-function (..., exclude = if (useNA == "no") c(NA, NaN), useNA = c("no", 
-    "ifany", "always"), dnn = list.names(...), deparse.level = 1) 
-{
-    list.names <- function(...) {
-        l <- as.list(substitute(list(...)))[-1L]
-        if (length(l) == 1L && is.list(..1) && !is.null(nm <- names(..1))) 
-            return(nm)
-        nm <- names(l)
-        fixup <- if (is.null(nm)) 
-            seq_along(l)
-        else nm == ""
-        dep <- vapply(l[fixup], function(x) switch(deparse.level + 
-            1, "", if (is.symbol(x)) as.character(x) else "", 
-            deparse(x, nlines = 1)[1L]), "")
-        if (is.null(nm)) 
-            dep
-        else {
-            nm[fixup] <- dep
-            nm
-        }
-    }
-    miss.use <- missing(useNA)
-    miss.exc <- missing(exclude)
-    useNA <- if (miss.use && !miss.exc && !match(NA, exclude, 
-        nomatch = 0L)) 
-        "ifany"
-    else match.arg(useNA)
-    doNA <- useNA != "no"
-    if (!miss.use && !miss.exc && doNA && match(NA, exclude, 
-        nomatch = 0L)) 
-        warning("'exclude' containing NA and 'useNA' != \"no\"' are a bit contradicting")
-    args <- list(...)
-    if (length(args) == 1L && is.list(args[[1L]])) {
-        args <- args[[1L]]
-        if (length(dnn) != length(args)) 
-            dnn <- paste(dnn[1L], seq_along(args), sep = ".")
-    }
-    if (!length(args)) 
-        stop("nothing to tabulate")
-    bin <- 0L
-    lens <- NULL
-    dims <- integer()
-    pd <- 1L
-    dn <- NULL
-    for (a in args) {
-        if (is.null(lens)) 
-            lens <- length(a)
-        else if (length(a) != lens) 
-            stop("all arguments must have the same length")
-        fact.a <- is.factor(a)
-        if (doNA) 
-            aNA <- anyNA(a)
-        if (!fact.a) {
-            a0 <- a
-            op <- options(warn = 2)
-            on.exit(options(op))
-            a <- factor(a, exclude = exclude)
-            options(op)
-        }
-        add.na <- doNA
-        if (add.na) {
-            ifany <- (useNA == "ifany")
-            anNAc <- anyNA(a)
-            add.na <- if (!ifany || anNAc) {
-                ll <- levels(a)
-                if (add.ll <- !anyNA(ll)) {
-                  ll <- c(ll, NA)
-                  TRUE
-                }
-                else if (!ifany && !anNAc) 
-                  FALSE
-                else TRUE
-            }
-            else FALSE
-        }
-        if (add.na) 
-            a <- factor(a, levels = ll, exclude = NULL)
-        else ll <- levels(a)
-        a <- as.integer(a)
-        if (fact.a && !miss.exc) {
-            ll <- ll[keep <- which(match(ll, exclude, nomatch = 0L) == 
-                0L)]
-            a <- match(a, keep)
-        }
-        else if (!fact.a && add.na) {
-            if (ifany && !aNA && add.ll) {
-                ll <- ll[!is.na(ll)]
-                is.na(a) <- match(a0, c(exclude, NA), nomatch = 0L) > 
-                  0L
-            }
-            else {
-                is.na(a) <- match(a0, exclude, nomatch = 0L) > 
-                  0L
-            }
-        }
-        nl <- length(ll)
-        dims <- c(dims, nl)
-        if (prod(dims) > .Machine$integer.max) 
-            stop("attempt to make a table with >= 2^31 elements")
-        dn <- c(dn, list(ll))
-        bin <- bin + pd * (a - 1L)
-        pd <- pd * nl
-    }
-    names(dn) <- dnn
-    bin <- bin[!is.na(bin)]
-    if (length(bin)) 
-        bin <- bin + 1L
-    y <- array(tabulate(bin, pd), dims, dimnames = dn)
-    class(y) <- "table"
-    y
-}
-<bytecode: 0x55b9dc0130c0>
-<environment: namespace:base>
+  type_of_contagion     n    prop   perc
+1         Community 69985 0.69985 69.985
+2          Imported    63 0.00063  0.063
+3           Unknown 29952 0.29952 29.952
 ```
 
 With this information it can be concluded that 70% of the covid-19 cases were from the community and only 0.06% were imported from elsewhere.
@@ -416,13 +338,11 @@ ggplot(data = table, aes(x = type_of_contagion, y = perc)) +
   labs(y = "%", x = " ", title = "Type of Contagion")
 ```
 
-``` error
-Error in ggplot(data = table, aes(x = type_of_contagion, y = perc)): could not find function "ggplot"
-```
+<img src="fig/Statistics-rendered-unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epiverse-trace/Error_bank.html)
+[![](fig/dudas.png){width="100"}](https://joskerus.github.io/EpiTKit-EN/Error_bank.html)
 
 </center>
 
@@ -480,7 +400,7 @@ An introduction to statistical inference and confidence intervals can be found i
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epiverse-trace/Error_bank.html)
+[![](fig/dudas.png){width="100"}](https://joskerus.github.io/EpiTKit-EN/Error_bank.html)
 
 </center>
 
@@ -631,13 +551,8 @@ results_data <- data.frame(reproduction_numbers, poisson_results)
 most_probable_number <- results_data %>%
   filter(poisson_results == max(poisson_results)) %>%
   pull(reproduction_numbers)
-```
 
-``` error
-Error in results_data %>% filter(poisson_results == max(poisson_results)) %>% : could not find function "%>%"
-```
 
-``` r
 # Create the plot with ggplot2
 ggplot(results_data, aes(x = reproduction_numbers, y = poisson_results)) +
   geom_line() +
@@ -645,9 +560,15 @@ ggplot(results_data, aes(x = reproduction_numbers, y = poisson_results)) +
   labs(y = "Probability", x = "Reproduction Number (R)", title = "Poisson Model")
 ```
 
-``` error
-Error in ggplot(results_data, aes(x = reproduction_numbers, y = poisson_results)): could not find function "ggplot"
+``` warning
+Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.
+This warning is displayed once every 8 hours.
+Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+generated.
 ```
+
+<img src="fig/Statistics-rendered-unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
 
 Therefore, if the number of secondary cases behaves according to a Poisson distribution, there is a high probability that the number of new cases observed on day 2 were generated with a reproduction number of R=2.
 This implies that the average number of secondary cases per primary case is 2.
@@ -737,7 +658,7 @@ This is also available in the `epiparameter` with the function `plot`.
 plot(SARS_R)  
 ```
 
-<img src="fig/Statistics-rendered-unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
+<img src="fig/Statistics-rendered-unnamed-chunk-15-1.png" style="display: block; margin: auto;" />
 
 Finally, it is possible to conclude that most cases infected with SARS do not spread the disease since the mode of the distribution is $0$.
 This result is expected given that $k<1$ indicating that the secondary cases are generated by a small group of infected people and that the estimated value of $R_0$ varies for the cases.
@@ -788,9 +709,7 @@ ggplot(data = data_geom, aes(x = x, y = probg)) +
   labs(y = "Probability", x = "Secondary cases", title = "Geometric Distribution")  # Add labels and title
 ```
 
-``` error
-Error in ggplot(data = data_geom, aes(x = x, y = probg)): could not find function "ggplot"
-```
+<img src="fig/Statistics-rendered-unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
 
 Under the geometric distribution, then there is a higher probability that a primary case can transmit the virus since the probability of a primary case generating 1,2, or more secondary cases is higher with this model than estimated with the negative binomial model.
 :::
@@ -841,7 +760,7 @@ runif(n, a, b)
 ```
 
 ``` output
-[1] 4.630945 3.856770 4.247208 2.390477 4.449303
+[1] 4.798330 4.970716 3.931566 2.548700 4.449651
 ```
 
 :::
@@ -974,7 +893,7 @@ The complete incubation period distribution for SARS can be plotted by means of:
 plot(SARS_incubation)
 ```
 
-<img src="fig/Statistics-rendered-unnamed-chunk-19-1.png" style="display: block; margin: auto;" />
+<img src="fig/Statistics-rendered-unnamed-chunk-20-1.png" style="display: block; margin: auto;" />
 
 The above is useful for answering questions such as: What is the probability that a SARS case will develop symptoms two days after infection?
 
@@ -1070,7 +989,7 @@ Parameters:
 plot(influenza_s)
 ```
 
-<img src="fig/Statistics-rendered-unnamed-chunk-22-1.png" style="display: block; margin: auto;" />
+<img src="fig/Statistics-rendered-unnamed-chunk-23-1.png" style="display: block; margin: auto;" />
 
 With this information the mean and standard deviation of the distribution could be found based on the application of the gamma distribution:
 
@@ -1170,7 +1089,7 @@ Error: object 'influenza_incubacion' not found
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epiverse-trace/Error_bank.html)
+[![](fig/dudas.png){width="100"}](https://joskerus.github.io/EpiTKit-EN/Error_bank.html)
 
 </center>
 
@@ -1200,55 +1119,25 @@ population <- data.frame(dead = c(rep(1, 40), rep(0, 160)))
 # Sample with size 5: Draw 100 random samples of size 5 (without replacement)
 samples_n5 <- population %>%  
   rep_sample_n(size = 5, reps = 100, replace = FALSE)  
-```
 
-``` error
-Error in population %>% rep_sample_n(size = 5, reps = 100, replace = FALSE): could not find function "%>%"
-```
-
-``` r
 # Compute the Case Fatality Ratio (CFR) for each replicate in the sample size 5
 cfr_n5 <- samples_n5 %>%  
   group_by(replicate) %>%  
   summarise(cfr = mean(dead))  
-```
 
-``` error
-Error in samples_n5 %>% group_by(replicate) %>% summarise(cfr = mean(dead)): could not find function "%>%"
-```
-
-``` r
 # Sample with size 10: Draw 100 random samples of size 10 (without replacement)
 samples_n10 <- population %>%  
   rep_sample_n(size = 10, reps = 100, replace = FALSE)  
-```
 
-``` error
-Error in population %>% rep_sample_n(size = 10, reps = 100, replace = FALSE): could not find function "%>%"
-```
-
-``` r
 # Compute the Case Fatality Ratio (CFR) for each replicate in the sample size 10
 cfr_n10 <- samples_n10 %>%  
   group_by(replicate) %>%  
   summarise(cfr = mean(dead))  
-```
 
-``` error
-Error in samples_n10 %>% group_by(replicate) %>% summarise(cfr = mean(dead)): could not find function "%>%"
-```
-
-``` r
 # Combine the results from both sample sizes (5 and 10)
 cfr <- bind_rows(cfr_n5, cfr_n10) %>%  
   mutate(size = factor(c(rep(5, 100), rep(10, 100))))  
-```
 
-``` error
-Error in bind_rows(cfr_n5, cfr_n10) %>% mutate(size = factor(c(rep(5, : could not find function "%>%"
-```
-
-``` r
 # Plot the sampling distribution of CFR estimates using a boxplot
 ggplot(cfr, aes(x = size, y = cfr, fill = size)) +  
   geom_boxplot(show.legend = FALSE) +  # Create a boxplot without legend
@@ -1257,9 +1146,7 @@ ggplot(cfr, aes(x = size, y = cfr, fill = size)) +
   scale_fill_brewer(palette = "Blues")  # Use a blue color palette for visualization
 ```
 
-``` error
-Error in ggplot(cfr, aes(x = size, y = cfr, fill = size)): could not find function "ggplot"
-```
+<img src="fig/Statistics-rendered-unnamed-chunk-27-1.png" style="display: block; margin: auto;" />
 
 If we calculate the mean and standard deviation of the estimated values of the CFR with the samples of size 5 and size 10, we see that indeed the standard deviation of the estimates is smaller with increasing sample size, but in both cases on average the samples were closer to the true parameter value of 0.20. 
 
@@ -1278,8 +1165,12 @@ cfr %>%
   )
 ```
 
-``` error
-Error in cfr %>% group_by(size) %>% summarise(media = mean(cfr), sd = sd(cfr), : could not find function "%>%"
+``` output
+# A tibble: 2 × 6
+  size  media    sd mediana   P25   P75
+  <fct> <dbl> <dbl>   <dbl> <dbl> <dbl>
+1 5     0.208 0.180     0.2   0     0.4
+2 10    0.197 0.116     0.2   0.1   0.3
 ```
 
 But, if in real life we can only take a random sample, this means that we will only have a single chance to calculate a statistic which will be the **point estimator**of the parameter.
@@ -1332,13 +1223,7 @@ As you have noticed so far, this step-by-step can become cumbersome because of t
 ``` r
 # Download the Ebola data from 1976
 data(ebola1976)  
-```
 
-``` warning
-Warning in data(ebola1976): data set 'ebola1976' not found
-```
-
-``` r
 # Calculate key statistics related to the Case Fatality Ratio (CFR)
 cfr_summary <- ebola1976 %>%  
   summarise(  
@@ -1349,19 +1234,14 @@ cfr_summary <- ebola1976 %>%
     lim_inf = cfr_est - 1.96 * error,  # Lower bound of the 95% confidence interval  
     lim_sup = cfr_est + 1.96 * error  # Upper bound of the 95% confidence interval  
   )  
-```
 
-``` error
-Error in ebola1976 %>% summarise(n = sum(cases), deaths = sum(deaths), : could not find function "%>%"
-```
-
-``` r
 # Print the result
 print(cfr_summary)
 ```
 
-``` error
-Error: object 'cfr_summary' not found
+``` output
+    n deaths  cfr_est      error   lim_inf   lim_sup
+1 245    234 0.955102 0.01322986 0.9291715 0.9810326
 ```
 
 :::
@@ -1376,8 +1256,9 @@ The CFR package also has a built-in function to automatically estimate with its 
 cfr::cfr_static(data = ebola1976)  
 ```
 
-``` error
-Error: object 'ebola1976' not found
+``` output
+  severity_estimate severity_low severity_high
+1          0.955102    0.9210866     0.9773771
 ```
 
 As you can see there are slight differences between the CI constructed step by step and the one reported by the function. `cfr_static`.
@@ -1385,7 +1266,7 @@ This is because the CFR package performs the construction of the CI by the metho
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epiverse-trace/Error_bank.html)
+[![](fig/dudas.png){width="100"}](https://joskerus.github.io/EpiTKit-EN/Error_bank.html)
 
 </center>
 
