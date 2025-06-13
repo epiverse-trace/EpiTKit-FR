@@ -89,7 +89,7 @@ loaded via a namespace (and not attached):
 [6] renv_1.1.4     evaluate_1.0.3
 ```
 
-**You will get information similar to this. In this case the version is 4.4.1**
+**You will get information similar to this. In this case the version is 4.5**
 
 2. Visit the RTools page on CRAN in the browser of your choice:
   <https://cran.r-project.org/bin/windows/Rtools/>and select the version of Rtools that matches the current version of R you have on your machine and your computer architecture.
@@ -99,6 +99,7 @@ loaded via a namespace (and not attached):
 
 | For versions of R...   | Install: |
 | ---------------------- | -------- |
+| From 4.5.0             | [RTools 4.5](https://cran.r-project.org/bin/windows/Rtools/rtools45/rtools.html)         |
 | From 4.4.0             | [RTools 4.4](https://cran.r-project.org/bin/windows/Rtools/rtools44/rtools.html)         |
 | Since 4.3.0            | [RTools 4.3](https://cran.r-project.org/bin/windows/Rtools/rtools43/rtools.html)         |
 | Starting with 4.2.     | [RTools 4.2](https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html)         |
@@ -138,7 +139,7 @@ To install a package in R, you can do so via:
 
 
 ``` r
-install.packages("paquete")
+install.packages("package")
 ```
 
 Some packages that are in their development phase can be installed from the latest version on github or other locations using remotes or pak packages.
@@ -147,8 +148,8 @@ Some packages that are in their development phase can be installed from the late
 
 
 ``` r
-if (!require("paquete")) {
-  install.packages("paquete")
+if (!require("package")) {
+  install.packages("package")
 }
 ```
 
