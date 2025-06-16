@@ -11,7 +11,7 @@
 carpentry: 'epitkit'
 
 # Overall title for pages.
-title: 'Epi Training Kit materials for Introduction to Infectious Disease Modelling for Public Health Course'
+title: 'Matériel du kit de formation Epi pour le cours d'introduction à la modélisation des maladies infectieuses pour les cours de santé publique'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: '2024-06-04'
@@ -27,7 +27,7 @@ life_cycle: 'pre-alpha'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/joskerus/EpiTKit-EN'
+source: 'https://github.com/epiverse-trace/EpiTKit-FR'
 
 # Default branch of your lesson
 branch: 'main'
@@ -80,5 +80,5 @@ profiles:
 varnish: epiverse-trace/varnish@epiversetheme
 # this is carpentries/sandpaper#533 in our fork so we can keep it up to date with main
 sandpaper: epiverse-trace/sandpaper@patch-renv-github-bug
-lang: en
+lang: fr
 
