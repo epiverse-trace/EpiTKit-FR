@@ -760,7 +760,7 @@ runif(n, a, b)
 ```
 
 ``` output
-[1] 4.798330 4.970716 3.931566 2.548700 4.449651
+[1] 3.486418 4.930341 2.233392 2.311258 2.419990
 ```
 
 :::
@@ -1078,12 +1078,10 @@ Parameters:
 
 ``` r
 # Plot the retrieved incubation period data
-plot(influenza_incubacion)
+plot(influenza_incubation)
 ```
 
-``` error
-Error: object 'influenza_incubacion' not found
-```
+<img src="fig/Statistics-rendered-unnamed-chunk-26-1.png" style="display: block; margin: auto;" />
 
 :::
 
@@ -1187,7 +1185,7 @@ The symbol α is known as the significance level.
 
 In general, a confidence interval is constructed with the following ingredients:
 
-$\text{Estimador} ±(\text{coeficiente de confiabilidad})*(\text{error estándar})$
+$\text{Estimator} ±(\text{reliability coefficient})*(\text{standard error})$
 
 :::: challenge
 
