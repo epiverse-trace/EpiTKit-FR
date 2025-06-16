@@ -1,6 +1,6 @@
 ---
 title: Bank of frequently asked questions and errors
-date: '2024-11-22'
+date: '2025-06-16'
 output:
   html_document:
     self_contained: true
@@ -11,7 +11,7 @@ licenses: CC-BY
 topics:
 - R
 - Rstudio
-- Spanish
+- English
 categories: practicals
 always_allow_html: true
 teaching: 80
@@ -493,7 +493,7 @@ data %>%  group_by(country) %>%
 
 
 ``` r
-datos <- data %>%
+data <- data %>%
   group_by(category) %>%
   data_processing(...) %>%
   ungroup()
@@ -568,7 +568,7 @@ A common mistake when trying to solve this problem is to apply the ungroup funct
 
 
 ``` r
-# aplicación equivocada de ungroup
+# incorrect use of ungroup
 by_day %>% ungroup()
 ```
 
@@ -599,8 +599,9 @@ by_day %>% ungroup()
 ```
 
 ``` r
-# si bien desagrupa el objeto para imprimirlo,
-# mientras no se almacene  el objeto serguirá agrupado
+# although it ungroups the object for printing,
+# as long as the object is not stored, it will remain grouped
+
 by_day %>% mutate(id = row_number())
 ```
 
