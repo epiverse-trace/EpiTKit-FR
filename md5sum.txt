@@ -9,6 +9,6 @@
 "episodes/Banco_erreurs.Rmd" "aaf4efa2c53803ba5f5fa8dad11b5934" "site/built/Banco_erreurs.md" "2025-06-16"
 "instructors/instructor-notes.md" "5cf113fd22defb29d17b64597f3c9bc0" "site/built/instructor-notes.md" "2025-06-13"
 "learners/reference.md" "add04910293ced6965410473fae6a1bb" "site/built/reference.md" "2025-06-16"
-"learners/setup.md" "2926e277b954e58a945d28fc4faee650" "site/built/setup.md" "2025-06-16"
+"learners/setup.md" "3897b76efe7dd6536a494e2a628066a7" "site/built/setup.md" "2025-06-16"
 "profiles/learner-profiles.md" "5fe5bf7537072422b91ed393ada03f9a" "site/built/learner-profiles.md" "2025-06-13"
 "renv/profiles/lesson-requirements/renv.lock" "3cb1e58ec08b69ed6900693203286b60" "site/built/renv.lock" "2025-06-13"
