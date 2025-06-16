@@ -1,129 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/404.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/404.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/Banco_errores.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/Banco_erreurs.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/CODE_OF_CONDUCT.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/Banco_errores.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/Deterministic_model.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/Error_bank.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/Deterministic_model.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/LICENSE.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/Error_bank.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/Reporte.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/Statistics.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/Reporte.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/Taller-R-RStudio.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/Statistics.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/Visualizacion.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/Taller-R-RStudio.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/aio.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/Visualizacion.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/estadistica.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/aio.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/images.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/estadistica.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/index.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/images.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/404.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/index.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/Banco_errores.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/404.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/Banco_erreurs.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/Deterministic_model.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/Banco_errores.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/Error_bank.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/LICENSE.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/Deterministic_model.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/Reporte.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/Error_bank.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/Statistics.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/Taller-R-RStudio.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/Reporte.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/Visualizacion.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/Statistics.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/aio.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/Taller-R-RStudio.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/estadistica.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/Visualizacion.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/images.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/aio.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/index.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/estadistica.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/instructor-notes.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/images.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/introduction.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/index.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/key-points.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/limpieza.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/introduction.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/profiles.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/key-points.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/reference.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/limpieza.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor/zika.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/modele_deterministe.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/instructor-notes.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/profiles.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/introduction.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/reference.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/key-points.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/statistiques.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/limpieza.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor/zika.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/profiles.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/reference.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/introduction.html</loc>
   </url>
   <url>
-    <loc>https://joskerus.github.io/EpiTKit-EN/zika.html</loc>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/limpieza.html</loc>
+  </url>
+  <url>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/modele_deterministe.html</loc>
+  </url>
+  <url>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/statistiques.html</loc>
+  </url>
+  <url>
+    <loc>https://epiverse-trace.github.io/EpiTKit-FR/zika.html</loc>
   </url>
 </urlset>
