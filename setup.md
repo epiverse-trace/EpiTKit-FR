@@ -2,104 +2,98 @@
 title: Setup
 ---
 
-The Introduction to Infectious Disease Modelling for Public Health course was developed by Pontificia Universidad Javeriana for African audiences, as part of the EpiTKit training strategy under the Epiverse Initiative. The course aims to strengthen knowledge and skills in infectious disease modelling and data analysis within the public health context.
+Le cours d'introduction à la modélisation des maladies infectieuses pour la santé publique a été développé par la Pontificia Universidad Javeriana pour le continent africain dans le cadre de la stratégie de formation EpiTKit du projet Epiverse. Ce cours est conçu pour améliorer les connaissances et les compétences en modélisation des maladies et en analyse de données dans le contexte de la santé publique.
 
+### Extension du kit de formation Epi : Une collaboration Sud-Sud pour des supports de formation multilingues et localisés en science des données pour la santé publique en Afrique
 
-## **BACKGROUND**
+## **CONTEXTE**
 
-Enhancing Tools for Response, Analytics and Control of Epidemics in Latin America and the Caribbean (**TRACE-LAC**) is a project funded by the **International Development Research Centre (IDRC)** with the objective of building a **high-quality, open-source, and interoperable data toolkit** for epidemic analytics --- and fostering an engaged user community --- to support decision-makers in responding to epidemics in Latin America.
+Améliorer les outils de réponse, d'analyse et de contrôle des épidémies en Amérique latine et dans les Caraïbes (**TRACE-LAC**) est un projet financé par le **Centre de recherches pour le développement international (CRDI)** ayant pour objectif de créer une **boîte à outils de données de haute qualité, open-source et interopérable** pour l'analyse des épidémies — et de favoriser une communauté d'utilisateurs engagés — afin d'aider les décideurs à répondre aux épidémies en Amérique latine.
 
-The **Pontificia Universidad Javeriana (Javeriana)** has been supported by **IDRC** to develop various activities and research products within the **TRACE-LAC** project. As part of this effort, Javeriana created the **Epi Training Kit (EpiTKit)**, an **open-access** online training strategy.
+La **Pontificia Universidad Javeriana (Javeriana)** a été soutenue par le **CRDI** pour développer diverses activités et produits de recherche dans le cadre du projet **TRACE-LAC**. Dans le cadre de cet effort, la Javeriana a créé le **Kit de formation Epi (EpiTKit)**, une stratégie de formation en ligne **en libre accès**.
 
-The **EpiTKit** consists of a series of modules and units for virtual training in **public health data science** and **infectious disease modeling**, aligned with the **Epiverse initiative** led by **data.org**. To date, **10 units** have been developed in **Spanish**, tailored for audiences in **Latin America and the Caribbean**.
+L'**EpiTKit** se compose d'une série de modules et d'unités pour la formation virtuelle en **science des données pour la santé publique** et en **modélisation des maladies infectieuses**, alignée sur l'**initiative Epiverse** dirigée par **data.org**. À ce jour, **10 unités** ont été développées en **espagnol**, adaptées aux publics d'**Amérique latine et des Caraïbes**.
 
-This new phase, developed through a partnership between Pontificia Universidad Javeriana and data.org, with the collaboration of the Medical Research Council Unit The Gambia at the London School of Hygiene & Tropical Medicine, expands the reach of the EpiTKit to Africa through a South-South collaboration. It emphasizes multilingualism and localism in the translation and cultural adaptation of training materials. The initiative aims to strengthen local capacities in data science for public health, while promoting knowledge exchange between regions facing similar gaps and epidemiological challenges.
+Cette nouvelle phase, développée en **partenariat entre la Pontificia Universidad Javeriana et data.org**, étend la portée de l'**EpiTKit** à l'**Afrique** grâce à une **collaboration Sud-Sud**, en mettant l'accent sur le **multilinguisme** et le **localisme** dans la **traduction** et l'**adaptation culturelle** des supports de formation. L'initiative vise à renforcer les capacités locales en science des données pour la santé publique tout en favorisant l'échange de connaissances entre les régions confrontées à des lacunes et des défis épidémiologiques similaires.
 
-## **GENERAL OBJECTIVE**
+## **OBJECTIF GÉNÉRAL**
 
-To **translate** and **culturally adapt** the materials of the **Epi Training Kit (EpiTKit)** for the target audience in  Côte d\'Ivoire, The Gambia, Ghana, Kenya, Nigeria, Rwanda, Senegal, Sierra Leone, Tanzania, and Togo, ensuring **linguistic clarity**, **technical accuracy**, and **cultural relevance**. This initiative embraces a **multilingual** and **localism** approach to create **context-sensitive learning experiences** that reflect **local public health realities** and strengthen regional capacities in data science for epidemic response.
+**Traduire** et **adapter culturellement** les supports de l'**Epi Training Kit (EpiTKit)** pour le public cible en Côte d'Ivoire, en Gambie, au Ghana, au Kenya, au Nigeria, au Rwanda, au Sénégal, en Sierra Leone, en Tanzanie et au Togo, en assurant la **clarté linguistique**, l'**exactitude technique** et la **pertinence culturelle**. Cette initiative adopte une approche **multilingue** et de **localisme** pour créer des **expériences d'apprentissage sensibles au contexte** qui reflètent les **réalités locales de la santé publique** et renforcent les capacités régionales en science des données pour la réponse aux épidémies.
 
-This objective includes:
+Cet objectif comprend :
 
--   **Translating** and **adapting** the training materials from an initial set of **five units** developed by **Epiverse TRACE-LAC** into **English** and **French**, while integrating **local contexts** and region-specific examples.
+-   **Traduction** et **adaptation** des supports de formation d'un ensemble initial de **cinq unités** développées par **Epiverse TRACE-LAC** en **anglais** et en **français**, tout en intégrant des **contextes locaux** et des exemples spécifiques à la région.
 
--   **Reviewing** technical terminology to ensure consistency, accuracy, and **relevance to local epidemiological landscapes**.
+-   **Examen** de la terminologie technique pour assurer la cohérence, l'exactitude et la **pertinence pour les paysages épidémiologiques locaux**.
 
--   **Adapting** and **producing multilingual multimedia resources** that are culturally appropriate and reflective of the diverse realities across African regions.
+-   **Adaptation** et **production de ressources multimédias multilingues** qui sont culturellement appropriées et reflètent les diverses réalités des régions africaines.
 
-The five units to be translated and adapted are:
+Les cinq unités à traduire et adapter sont :
 
-1.  **Introduction to Epidemic Theory**
+1.  **Introduction à la théorie des épidémies**
 
-2.  **General Epidemiology**
+2.  **Épidémiologie générale**
 
-3.  **Introduction to Statistics and Probability**
+3.  **Introduction aux statistiques et aux probabilités**
 
-4.  **Parameters**
+4.  **Paramètres**
 
-5.  **Building a Deterministic Model**
+5.  **Construction d'un modèle déterministe**
 
 ## **INSTITUTIONS**
 
-Pontificia Universidad Javeriana
-data.org
-The Medical Research Council Unit The Gambia at the London School of Hygiene & Tropical Medicine
-  
-For more information about the project, visit our page:
-[Project page on GitHub](https://epiverse-trace.github.io/translation-epitkit/)
+Pontificia Universidad Javeriana, le Medical Research Council Unit en Gambie et data.org.
 
+Pour plus d'informations sur le projet, visitez notre page :
+[Page du projet sur GitHub](https://epiverse-trace.github.io/translation-epitkit/)
 
-## Course Rules
-Learn about our [TRACE-LAC Code of Conduct](https://drive.google.com/drive/u/0/folders/1_rvQDFcniVR3nKVWGDIhzR6Bk-5lgN8J).
+## Règles du cours
+Découvrez notre [Code de conduite TRACE-LAC](https://drive.google.com/drive/u/0/folders/1_rvQDFcniVR3nKVWGDIhzR6Bk-5lgN8J).
 
-## Software Configuration
- 
-Follow these two steps: 
- 
-### 1. Install or Update R and RStudio 
- 
-R and RStudio are two separate pieces of software: 
- 
-* **R**  is a programming language and software used to execute code written in R.
-* **RStudio**  is an integrated development environment (IDE) that makes working with R easier. We recommend using RStudio to interact with R.
+## Configuration logicielle
 
-To install R and RStudio, follow these instructions <https://posit.co/download/rstudio-desktop/>.
+Suivez ces deux étapes :
+
+### 1. Installer ou mettre à jour R et RStudio
+
+R et RStudio sont deux logiciels distincts :
+
+* **R** est un langage de programmation et un logiciel utilisé pour exécuter du code écrit en R.
+* **RStudio** est un environnement de développement intégré (IDE) qui facilite le travail avec R. Nous recommandons d'utiliser RStudio pour interagir avec R.
+
+Pour installer R et RStudio, suivez ces instructions <https://posit.co/download/rstudio-desktop/>.
 
 ::::::::::::::::::::::::::::: callout
 
-### Already Installed? 
- 
-Wait! This is a great time to ensure your R installation is up to date.
-This tutorial requires **R versión 4.0.0 or later**. 
- 
+### Déjà installé ?
+
+Attendez ! C'est le bon moment pour vous assurer que votre installation de R est à jour.
+Ce tutoriel nécessite **R version 4.0.0 ou ultérieure**.
+
 :::::::::::::::::::::::::::::
 
-To check if your R version is up to date: 
- 
-- In RStudio, your R version will be displayed in the
- [la ventana de la consola](https://docs.posit.co/ide/user/ide/guide/code/console.html). Or you can run  `sessionInfo()`.
+Pour vérifier si votre version de R est à jour :
 
-- **- To update R**, download and install the latest version from the [R proiect website](https://cran.rstudio.com/) for your operating system. 
- 
-  - After installing a new version, you’ll need to reinstall all packages. 
-  
-  - For Windows, the `{installr}` package can update R and migrate your package library. 
+-   Dans RStudio, votre version de R sera affichée dans [la fenêtre de la console](https://docs.posit.co/ide/user/ide/guide/code/console.html). Ou vous pouvez exécuter `sessionInfo()`.
 
-- **To update RStudio**, open RStudio and `click Help > Check for Updates`. If a new version is available, follow the on-screen instructions.
+-   **- Pour mettre à jour R**, téléchargez et installez la dernière version depuis le [site web du projet R](https://cran.rstudio.com/) pour votre système d'exploitation.
 
+    -   Après avoir installé une nouvelle version, vous devrez réinstaller tous les paquets.
+
+    -   Pour Windows, le paquet `{installr}` peut mettre à jour R et migrer votre bibliothèque de paquets.
+
+-   **Pour mettre à jour RStudio**, ouvrez RStudio et `cliquez sur Aide > Rechercher les mises à jour`. Si une nouvelle version est disponible, suivez les instructions à l'écran.
 
 ::::::::::::::::::::::::::::: callout
 
-### Check for Updates Regularly 
- 
-While this might sound intimidating, it's **far more common** to encounter issues due to outdated versions of R or R packages. Keeping up with the latest versions of R, RStudio, and any frequently used packages is a best practice.
- 
+### Vérifier les mises à jour régulièrement
+
+Bien que cela puisse sembler intimidant, il est **beaucoup plus courant** de rencontrer des problèmes en raison de versions obsolètes de R ou de paquets R. Se tenir au courant des dernières versions de R, RStudio et de tous les paquets fréquemment utilisés est une bonne pratique.
+
 :::::::::::::::::::::::::::::
 
+## Jeu de données
 
+N'oubliez pas de les stocker dans le dossier **data** de l'emplacement de votre projet.
 
-## Dataset
- 
-Remember to store them in the **data** folder within your project location 
- 
-- [Data](https://raw.githubusercontent.com/epiverse-trace/translation-epitkit/refs/heads/main/data/sample_data.RDS) 
+-   [Données](https://raw.githubusercontent.com/epiverse-trace/translation-epitkit/refs/heads/main/data/donnees_echantillon.RDS)
