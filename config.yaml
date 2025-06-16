@@ -59,9 +59,9 @@ contact: 'gomezblaura@javeriana.edu.co'
 
 # Order of episodes in your lesson
 episodes:
-- Statistics.Rmd
-- Deterministic_model.Rmd
-- Error_bank.Rmd
+- statistiques.Rmd
+- modele_deterministe.Rmd
+- Banco_erreurs.Rmd
 
 
 # Information for Learners
