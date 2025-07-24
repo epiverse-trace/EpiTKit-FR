@@ -88,7 +88,7 @@ loaded via a namespace (and not attached):
 [6] renv_1.1.4     evaluate_1.0.3
 ```
 
-**Vous obtiendrez des informations similaires à celles-ci. Dans ce cas, la version est 4.5.0.**
+**Vous obtiendrez des informations similaires à celles-ci.**
 
 2. Visitez la page RTools sur le CRAN dans le navigateur de votre choix :
   <https://cran.r-project.org/bin/windows/Rtools/>et sélectionnez la version de Rtools qui correspond à la version actuelle de R que vous avez sur votre machine et à l'architecture de votre ordinateur.
