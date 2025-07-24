@@ -67,23 +67,24 @@ full_version <- TRUE
 
 ## **Table des matières**
 
-\+--------------------------------------------------------------------+
-| Thème 1 : Maladies à transmission vectorielle : biologie de la maladie à transmission vectorielle.
-| Biologie des vecteurs, virus Zika, diagnostics et interventions.
-| |
-| Sujet 2 : Révision Qu'est-ce qu'un modèle déterministe simple ?
-| |
-| Sujet 3 : Modèle SIR simple Zika ?
-| |
-| Sujet 4 : Développement de diagrammes et d'équations du modèle Zika 4.
-| |
- 5. sujet 5 : Elaborer la table des paramètres du modèle Zika | | simple.
-| Le modèle simple Zika.                                                          |
-| |
- Sujet 6 : Le modèle Zika en R | | |
-| |
-| Thème 7 : Paramétrage des interventions de contrôle pour Zika | 8.
-\+--------------------------------------------------------------------+
++--------------------------------------------------------------------+
+| Thème 1 : Maladies à transmission vectorielle                      |
+| → Biologie de la maladie, biologie des vecteurs                    |
+| → Virus Zika, diagnostics et interventions                         |
+|                                                                    |
+| Sujet 2 : Qu'est-ce qu'un modèle déterministe simple ?             |
+|                                                                    |
+| Sujet 3 : Modèle SIR simple pour Zika                              |
+|                                                                    |
+| Sujet 4 : Développement de diagrammes et équations du modèle Zika |
+|                                                                    |
+| Sujet 5 : Table des paramètres du modèle simple pour Zika          |
+| → Description du modèle simple Zika                                |
+|                                                                    |
+| Sujet 6 : Implémentation du modèle Zika en R                       |
+|                                                                    |
+| Thème 7 : Paramétrage des interventions de contrôle pour Zika      |
++--------------------------------------------------------------------+
 
 :::::::::::::::::::
 
