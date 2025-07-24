@@ -106,7 +106,7 @@ library(cfr)
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_erreurs.html)
+[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/EpiTKit-FR/Banco_erreurs.html)
 
 </center>
 
@@ -120,7 +120,7 @@ Voici quelques exemples pour vous aider à comprendre ces concepts.
 - Veuillez tenir compte du fait que vous avez déjà suivi l'unité d'introduction sur R et
   l'unité sur la visualisation des données. Le tableau de données pour cette
   se trouve dans :
-  <https://raw.githubusercontent.com/epiverse-trace/translation-epitkit/refs/heads/main/data/donnees_echantillon.RDS> 
+  <https://raw.githubusercontent.com/epiverse-trace/translation-EpiTKit-FR/refs/heads/main/data/donnees_echantillon.RDS> 
 
 - Une fois que vous avez téléchargé les données sur votre ordinateur et qu'elles se trouvent dans l'application
   de votre projet, vous pouvez exécuter la commande suivante :
@@ -256,7 +256,7 @@ Il est important de noter qu'en raison de l'asymétrie de la distribution, la mo
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_erreurs.html)
+[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/EpiTKit-FR/Banco_erreurs.html)
 
 </center>
 
@@ -306,7 +306,7 @@ Error in ggplot(data = tableau, aes(x = type_de_contagion, y = perc)): could not
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_erreurs.html)
+[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/EpiTKit-FR/Banco_erreurs.html)
 
 </center>
 
@@ -361,7 +361,7 @@ Vous trouverez une introduction à l'inférence statistique et aux intervalles d
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_erreurs.html)
+[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/EpiTKit-FR/Banco_erreurs.html)
 
 </center>
 
@@ -722,7 +722,7 @@ runif(n, a, b)
 ```
 
 ``` output
-[1] 3.751079 3.070505 2.227886 4.200483 3.059696
+[1] 3.025665 4.645943 3.540718 2.814880 4.008770
 ```
 
 :::
@@ -1264,7 +1264,7 @@ Cela s'explique par le fait que le progiciel CFR construit l'IC par la méthode 
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_erreurs.html)
+[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/EpiTKit-FR/Banco_erreurs.html)
 
 </center>
 
