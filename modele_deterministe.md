@@ -127,7 +127,7 @@ library(cowplot)
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_erreurs.html)
+[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/EpiTKit-FR/Banco_erreurs.html)
 
 </center>
 
@@ -259,7 +259,7 @@ TEMP <- 1               # Nombre d'années à simuler. Pour cet exercice, nous c
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_erreurs.html)
+[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/EpiTKit-FR/Banco_erreurs.html)
 
 </center>
 
@@ -401,7 +401,7 @@ modele_zika <- function(temp, variable_detat, parametres) {
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_erreurs.html)
+[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/EpiTKit-FR/Banco_erreurs.html)
 
 </center>
 
@@ -496,7 +496,7 @@ initiales <- c(Sh = Nh,        # Population d'humains susceptibles avant le déb
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_erreurs.html)
+[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/EpiTKit-FR/Banco_erreurs.html)
 
 </center>
 
@@ -554,7 +554,7 @@ sortie <- ode(y = initiales ,
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_erreurs.html)
+[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/EpiTKit-FR/Banco_erreurs.html)
 
 </center>
 
@@ -608,7 +608,7 @@ sortie <- ode(y = initiales ,
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_erreurs.html)
+[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/EpiTKit-FR/Banco_erreurs.html)
 
 </center>
 
@@ -823,7 +823,7 @@ plot_grid(p1, p2, p3, ncol = 2)
 
 <center>
 
-[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/epitkit/Banco_erreurs.html)
+[![](fig/dudas.png){width="100"}](https://epiverse-trace.github.io/EpiTKit-FR/Banco_erreurs.html)
 
 </center>
 
