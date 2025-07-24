@@ -404,8 +404,7 @@ publique</em></strong></p>
 <table class="table">
 <colgroup><col width="100%"></colgroup>
 <tbody><tr class="odd">
-<td><ul>
-<li>
+<td>
 <p>Thème 1 : Introduction à la pensée statistique (Voir dans
 plateforme de cours)</p>
 <p>Thème 2 : Statistiques descriptives (Voir le complément dans la
@@ -415,8 +414,7 @@ plate-forme de cours)</p>
 complémentaire de la plate-forme de cours)</p>
 <p>Thème 5 : Introduction à l’inférence statistique (Voir le supplément
 sur la plateforme de cours)</p>
-</li>
-</ul></td>
+</td>
 </tr></tbody>
 </table>
 </div>
@@ -532,64 +530,6 @@ la largeur de l’intervalle. Dans R, il peut être construit comme suit
 </h3>
 <pre class="error" tabindex="0"><code>Error in ggplot(data = echantillon_covid, aes(x = age)): could not find function "ggplot"</code></pre>
 </div>
-<p>Les <strong>Boxplot</strong> sont construits en affichant les
-statistiques suivantes horizontalement ou verticalement :</p>
-<ul>
-<li><p>Premier quartile Q1 (25e percentile) : Valeur inférieure au 25e
-percentile des données. “Première ligne”.</p></li>
-<li><p>Deuxième quartile Q2 (50e percentile ou médiane) : Valeur qui
-part de en dessous de 50 % des données. “Ligne médiane”.</p></li>
-<li>
-<p>Troisième quartile Q3 (50e percentile ou médiane) : Valeur qui
-part de en dessous de 75 % des données. “Troisième ligne”.</p>
-<figure><img src="fig/boxplot.png" class="figure mx-auto d-block"></figure>
-</li>
-</ul>
-<p>En outre, ces graphiques sont utiles pour détecter les valeurs
-aberrantes en fixant une limite inférieure (Q1-1,5×RIQ) et une limite
-supérieure (Q3+1,5×RIQ) basées sur RIQ=Q3-Q1. Les données situées en
-dehors de ces limites sont considérées comme inhabituelles et doivent
-être examinées. En présence de valeurs aberrantes, les lignes ou les
-moustaches vont jusqu’aux limites inférieures ou supérieures, sinon
-elles vont jusqu’aux valeurs minimales et maximales, respectivement.</p>
-<p>Une autre utilité de l’outil <strong>boxplot</strong> et
-<strong>histogrammes</strong> est qu’ils permettent de connaître la
-forme de la distribution afin de choisir le meilleur indicateur de
-tendance centrale. Ainsi, une distribution peut être symétrique ou
-asymétrique, positive/négative. En cas de symétrie, il est recommandé
-d’utiliser la moyenne accompagnée de l’écart-type et, dans le cas
-contraire, la médiane et l’intervalle interquartile, car la moyenne peut
-être influencée par les données extrêmes de la distribution. N’oubliez
-pas qu’un indicateur de tendance centrale doit toujours être accompagné
-d’un juge, c’est-à-dire de son indicateur de variabilité respectif.</p>
-<figure><img src="fig/distribucion.png" class="figure mx-auto d-block"></figure><ul>
-<li><p><strong>Légende explicative A :</strong> Dans une distribution
-symétrique, la moyenne, la moyenne, le mode et la médiane prennent la
-même valeur et on constate que les données sont réparties uniformément
-autour de la valeur centrale. Pour cette type de distribution, il est
-recommandé de décrire la série de données par des moyenne et
-l’écart-type.</p></li>
-<li><p><strong>Légende explicative B :</strong> Distribution asymétrique
-positive ou asymétrique vers la droite. Ce type de distribution est se
-caractérise par une plus grande concentration de données vers la droite.
-Ce type de distribution se caractérise par une concentration plus
-importante de données vers la droite. la valeur maximale de la
-distribution. Le comportement attendu est que le
-moyenne&gt;médiane&gt;modale puisque la moyenne est influencée par la
-valeur maximale de la distribution. valeurs extrêmes positives de la
-distribution. Il est recommandé que de décrire les données au moyen de
-la médiane et de l’étendue. L’écart interquartile.</p></li>
-<li><p><strong>Légende explicative C :</strong> Distribution asymétrique
-négative ou asymétrique vers la gauche. Ce type de distribution est
-caractérisé par une plus grande concentration de données vers la gauche.
-Le maximum de la distribution est à droite, mais certaines valeurs sont
-concentrées vers la droite. vers la valeur minimale de la distribution
-(valeurs vers la gauche). Les comportement attendu est que le
-mode&gt;moyenne&gt;médiane&gt;médiane étant donné que cette cette
-dernière est influencée par les valeurs extrêmes du côté du côté gauche.
-Il est recommandé de décrire les données par la médiane et l’écart
-interquartile.</p></li>
-</ul>
 <p>Ensuite, nous allons visualiser l’âge des cas COVID-19 à l’aide d’un
 diagramme en boîte.</p>
 <div class="codewrapper sourceCode" id="cb7">
@@ -1199,7 +1139,7 @@ c’est-à-dire en <code>R</code> est résolu à l’aide du code suivant :</p>
 <div class="codewrapper">
 <h3 class="code-label">SORTIE<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] 3.025665 4.645943 3.540718 2.814880 4.008770</code></pre>
+<pre class="output" tabindex="0"><code>[1] 3.164584 2.087320 2.242914 4.394300 4.563492</code></pre>
 </div>
 </div>
 </div>
