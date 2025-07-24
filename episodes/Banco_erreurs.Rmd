@@ -571,16 +571,7 @@ Allez dans Outils > Options globales > Sweave.
 
 Assurez-vous que l'option "Typeset PDF" est réglée pour utiliser TinyTeX.
 
-### Matériel supplémentaire pouvant contribuer à votre apprentissage :
 
-**Traitement des données avec Tidyverse et R :**
-
-<https://www.youtube.com/watch?v=6STcQVX8Hk0>
-
-::: keypoints
-
-
-:::
 
 ## Contributions
 
