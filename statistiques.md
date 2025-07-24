@@ -51,7 +51,7 @@ Cette unité est un complément à l'unité ***Introduction à la modélisation 
 ### **Table des matières**
 
 +-----------------------------------------------------------------------+
-| - Thème 1 : Introduction à la pensée statistique (Voir dans           
+|   Thème 1 : Introduction à la pensée statistique (Voir dans           
 |   plateforme de cours)                                                
 |                                                                         
 |   Thème 2 : Statistiques descriptives (Voir le complément dans la      
@@ -166,56 +166,6 @@ ggplot(data = echantillon_covid, aes(x = age)) +
 ``` error
 Error in ggplot(data = echantillon_covid, aes(x = age)): could not find function "ggplot"
 ```
-
-Les **Boxplot** sont construits en affichant les statistiques suivantes horizontalement ou verticalement :
-
-- Premier quartile Q1 (25e percentile) : Valeur inférieure au 25e percentile
-  des données. "Première ligne".
-
-- Deuxième quartile Q2 (50e percentile ou médiane) : Valeur qui part de
-  en dessous de 50 % des données. "Ligne médiane".
-
-- Troisième quartile Q3 (50e percentile ou médiane) : Valeur qui part de
-  en dessous de 75 % des données. "Troisième ligne".
-  
-  ![](fig/boxplot.png)
-
-En outre, ces graphiques sont utiles pour détecter les valeurs aberrantes en fixant une limite inférieure (Q1-1,5×RIQ) et une limite supérieure (Q3+1,5×RIQ) basées sur RIQ=Q3-Q1.
-Les données situées en dehors de ces limites sont considérées comme inhabituelles et doivent être examinées.
-En présence de valeurs aberrantes, les lignes ou les moustaches vont jusqu'aux limites inférieures ou supérieures, sinon elles vont jusqu'aux valeurs minimales et maximales, respectivement.
-
-Une autre utilité de l'outil **boxplot** et **histogrammes** est qu'ils permettent de connaître la forme de la distribution afin de choisir le meilleur indicateur de tendance centrale.
-Ainsi, une distribution peut être symétrique ou asymétrique, positive/négative.
-En cas de symétrie, il est recommandé d'utiliser la moyenne accompagnée de l'écart-type et, dans le cas contraire, la médiane et l'intervalle interquartile, car la moyenne peut être influencée par les données extrêmes de la distribution.
-N'oubliez pas qu'un indicateur de tendance centrale doit toujours être accompagné d'un juge, c'est-à-dire de son indicateur de variabilité respectif.
-
-![](fig/distribucion.png)
-
-- **Légende explicative A :** Dans une distribution symétrique, la moyenne,
-  la moyenne, le mode et la médiane prennent la même valeur et on constate que les données sont
-  réparties uniformément autour de la valeur centrale. Pour cette
-  type de distribution, il est recommandé de décrire la série de données par des
-  moyenne et l'écart-type.
-
-- **Légende explicative B :** Distribution asymétrique positive ou
-  asymétrique vers la droite. Ce type de distribution est
-  se caractérise par une plus grande concentration de données vers la droite.
-  Ce type de distribution se caractérise par une concentration plus importante de données vers la droite.
-  la valeur maximale de la distribution. Le comportement attendu est que le
-  moyenne>médiane>modale puisque la moyenne est influencée par la valeur maximale de la distribution.
-  valeurs extrêmes positives de la distribution. Il est recommandé que
-  de décrire les données au moyen de la médiane et de l'étendue.
-  L'écart interquartile.
-
-- **Légende explicative C :** Distribution asymétrique négative ou
-  asymétrique vers la gauche. Ce type de distribution est
-  caractérisé par une plus grande concentration de données vers la gauche.
-  Le maximum de la distribution est à droite, mais certaines valeurs sont concentrées vers la droite.
-  vers la valeur minimale de la distribution (valeurs vers la gauche). Les
-  comportement attendu est que le mode>moyenne>médiane>médiane étant donné que cette
-  cette dernière est influencée par les valeurs extrêmes du côté
-  du côté gauche. Il est recommandé de décrire les données par
-  la médiane et l'écart interquartile.
 
 Ensuite, nous allons visualiser l'âge des cas COVID-19 à l'aide d'un diagramme en boîte.
 
@@ -722,7 +672,7 @@ runif(n, a, b)
 ```
 
 ``` output
-[1] 3.025665 4.645943 3.540718 2.814880 4.008770
+[1] 3.164584 2.087320 2.242914 4.394300 4.563492
 ```
 
 :::
