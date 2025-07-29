@@ -240,7 +240,7 @@ m <- 2                  # Densité de moustiques femelles par humain
 
 Nv <- m * Nh            # Nombre de moustiques (m * Nh)
 
-R0 <- 1000              # Nombre de reproduction de base
+R0 <- 3              # Nombre de reproduction de base
 
 ph <- 0.7               # Probabilité de transmission d'un moustique infecté à un humain susceptible après une piqûre.
 
