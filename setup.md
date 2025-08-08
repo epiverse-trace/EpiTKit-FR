@@ -78,4 +78,4 @@ Bien que cela puisse sembler intimidant, il est **beaucoup plus courant** de ren
 
 N'oubliez pas de les stocker dans le dossier **data** de l'emplacement de votre projet.
 
--   [Données](https://raw.githubusercontent.com/epiverse-trace/translation-epitkit/refs/heads/main/data/donnees_echantillon.RDS)
+-   [Données](https://raw.githubusercontent.com/epiverse-trace/EpiTKit-FR/refs/heads/main/episodes/data/echantillon_covid.RDS)
