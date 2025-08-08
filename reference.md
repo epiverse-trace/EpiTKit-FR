@@ -81,7 +81,7 @@ En épidémiologie, le terme débordement (spillover) fait référence au proces
 
 ## Zoonose
 
-L'OPS définit la zoonose comme "des maladies infectieuses naturellement transmissibles des animaux vertébrés aux humains".
+L'OMS définit la zoonose comme "des maladies infectieuses naturellement transmissibles des animaux vertébrés aux humains".
 
 ## Paramètres de transmission
 
@@ -460,10 +460,6 @@ Tout être humain, animal, arthropode, plante, sol, ou matière inanimée, ou co
 ## Taille minimale de la communauté (TMC)
 
 Elle est définie comme la taille minimale d'une population fermée au sein de laquelle un agent pathogène non zoonotique de personne à personne peut persister indéfiniment. En d'autres termes, c'est la taille totale de la population (d'individus susceptibles et infectés, ou autres) nécessaire pour maintenir une épidémie une fois qu'elle est apparue.
-
-## Super-propagation
-
-Un événement au cours duquel une maladie infectieuse se propage beaucoup plus que d'habitude. De même, un individu qui infecte de manière disproportionnée un grand nombre d'individus et qui est susceptible de déterminer la vitesse et la gravité d'une épidémie est appelé un super-propagateur.
 
 ## Transmission vectorielle
 
