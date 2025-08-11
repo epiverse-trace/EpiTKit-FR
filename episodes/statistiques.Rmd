@@ -143,8 +143,9 @@ Dans R, il peut être construit comme suit :
 
 ggplot(data = echantillon_covid, aes(x = age)) +   
   geom_histogram(color="darkblue", fill="lightblue") +  
-  labs(y = "Fréquence absolue", x = "Âge en années",
-   	title = "Répartition par âge")
+  labs(y = "Fréquence absolue", x = "Âge (en années)",
+       title = "Répartition par âge")
+
 ```
 
 ```{r}
@@ -153,8 +154,8 @@ ggplot(data = echantillon_covid, aes(x = age)) +
 ggplot(data = echantillon_covid, aes(x = age)) +   
   geom_histogram(aes(y = after_stat(density)), 
                  color = "darkblue", fill = "lightblue") +  
-  labs(y = "Density", x = "Âge en années", 
-       title = "Age Distribution")
+  labs(y = "Densité", x = "Âge (en années)", 
+       title = ""Distribution de l'âge"")
 
 
 ```
@@ -270,6 +271,7 @@ if(!require("epiparameter")) install.packages("epiparameter")
 
 # chargez la bibliothèque epiparameter
 library(epiparameter)
+
 ```
 
 **Modèles discrets**
@@ -286,7 +288,7 @@ Si X a une distribution binomiale, il est représenté comme suit : X~Bin(n,p)
 
 Et sa fonction de densité, sa moyenne, son espérance et sa variance correspondent à :
 
-$f(x)=P(X=x)=(n x )$
+$f(x)=P(X=x)=( _nC_x )$
 
 $p^x (1-p)^{(n-x)}$
 
@@ -298,7 +300,7 @@ Exemple : Si un virus ayant un taux d'attaque de 60 % est introduit dans une com
 
 Be $X~Bin(n=20,p=0.60)$ il faut alors calculer l'expression suivante :
 
-$P(X≤10)=∑_(x=0)^10 (20 x ) 〖0.60〗^x (1-0.60)^(20-x)$
+$P(X≤10)=∑_{(x=0)}^{10} ( _{20} C_x ) 0.60^x (1-0.60)^{(20-x)}$
 
 Dans R, cette expression peut être calculée comme suit :
 
@@ -310,7 +312,7 @@ x <- 10
 pbinom(x,n,p, lower.tail = TRUE)
 ```
 
-Par conséquent, la probabilité qu'un maximum de 10 personnes soient infectées est de 24,5 %.
+Par conséquent, la probabilité qu'un maximum de 10 personnes soient infectées est de 24.5 %.
 
 Sur [distribution-zoo](https://ben18785.shinyapps.io/distribution-zoo/) vous pouvez consulter la distribution complète de la variable
 
@@ -370,6 +372,7 @@ nombre de reproduction (R) comme suit :**
 
 ```{r}
 # Fonction de calcul de la probabilité de Poisson
+
 probabilite_poisson <- function(valeur1, valeur2, taux_reproduction) {
   dpois(valeur2, taux_reproduction * valeur1)
 }
@@ -996,5 +999,6 @@ Cela s'explique par le fait que le progiciel CFR construit l'IC par la méthode 
 - Andree Valle-Campo : Modifications mineures
 - José M. Velasco-España : Editions mineures
 - Hugo Gruson: Traduction en français
+
 
 
