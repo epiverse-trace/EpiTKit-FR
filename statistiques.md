@@ -144,8 +144,8 @@ Dans R, il peut être construit comme suit :
 
 ggplot(data = echantillon_covid, aes(x = age)) +   
   geom_histogram(color="darkblue", fill="lightblue") +  
-  labs(y = "Fréquence absolue", x = "Âge en années",
-   	title = "Répartition par âge")
+  labs(y = "Fréquence absolue", x = "Âge (en années)",
+       title = "Répartition par âge")
 ```
 
 ``` error
@@ -159,12 +159,15 @@ Error in ggplot(data = echantillon_covid, aes(x = age)): could not find function
 ggplot(data = echantillon_covid, aes(x = age)) +   
   geom_histogram(aes(y = after_stat(density)), 
                  color = "darkblue", fill = "lightblue") +  
-  labs(y = "Density", x = "Âge en années", 
-       title = "Age Distribution")
+  labs(y = "Densité", x = "Âge (en années)", 
+       title = ""Distribution de l'âge"")
 ```
 
 ``` error
-Error in ggplot(data = echantillon_covid, aes(x = age)): could not find function "ggplot"
+Error in parse(text = input): <text>:7:18: unexpected symbol
+6:   labs(y = "Densité", x = "Âge (en années)", 
+7:        title = ""Distribution
+                    ^
 ```
 
 Ensuite, nous allons visualiser l'âge des cas COVID-19 à l'aide d'un diagramme en boîte.
@@ -351,7 +354,7 @@ Si X a une distribution binomiale, il est représenté comme suit : X~Bin(n,p)
 
 Et sa fonction de densité, sa moyenne, son espérance et sa variance correspondent à :
 
-$f(x)=P(X=x)=(n x )$
+$f(x)=P(X=x)=( _nC_x )$
 
 $p^x (1-p)^{(n-x)}$
 
@@ -363,7 +366,7 @@ Exemple : Si un virus ayant un taux d'attaque de 60 % est introduit dans une com
 
 Be $X~Bin(n=20,p=0.60)$ il faut alors calculer l'expression suivante :
 
-$P(X≤10)=∑_(x=0)^10 (20 x ) 〖0.60〗^x (1-0.60)^(20-x)$
+$P(X≤10)=∑_{(x=0)}^{10} ( _{20} C_x ) 0.60^x (1-0.60)^{(20-x)}$
 
 Dans R, cette expression peut être calculée comme suit :
 
@@ -380,7 +383,7 @@ pbinom(x,n,p, lower.tail = TRUE)
 [1] 0.2446628
 ```
 
-Par conséquent, la probabilité qu'un maximum de 10 personnes soient infectées est de 24,5 %.
+Par conséquent, la probabilité qu'un maximum de 10 personnes soient infectées est de 24.5 %.
 
 Sur [distribution-zoo](https://ben18785.shinyapps.io/distribution-zoo/) vous pouvez consulter la distribution complète de la variable
 
@@ -441,6 +444,7 @@ nombre de reproduction (R) comme suit :**
 
 ``` r
 # Fonction de calcul de la probabilité de Poisson
+
 probabilite_poisson <- function(valeur1, valeur2, taux_reproduction) {
   dpois(valeur2, taux_reproduction * valeur1)
 }
@@ -672,7 +676,7 @@ runif(n, a, b)
 ```
 
 ``` output
-[1] 3.164584 2.087320 2.242914 4.394300 4.563492
+[1] 4.037703 2.309695 2.046667 4.363997 3.897414
 ```
 
 :::
@@ -1246,5 +1250,6 @@ Cela s'explique par le fait que le progiciel CFR construit l'IC par la méthode 
 - Andree Valle-Campo : Modifications mineures
 - José M. Velasco-España : Editions mineures
 - Hugo Gruson: Traduction en français
+
 
 
