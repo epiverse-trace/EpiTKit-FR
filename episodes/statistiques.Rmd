@@ -93,7 +93,9 @@ if(!require("infer")) install.packages("infer")
 # Pour installer le package cfr si vous ne l'avez pas (ou si vous n'êtes pas sûr de l'avoir), exécutez le code suivant
 
 if (!require("cfr")) install.packages("cfr")
+```
 
+```{r include=TRUE, echo=FALSE}
 
 # Avant de commencer et à chaque fois que vous démarrez une session R, chargez ces bibliothèques
 library(ggplot2)
@@ -335,11 +337,13 @@ Sa fonction de densité, d'espérance, de moyenne et de variance correspond à :
 $fx=P(X=x)=\frac{e^{-λ}λ^x}{x!}, x=0,1,2,..,$
 
 $E(x)=λ Var(x)=λ$
-
+ 
 Dans le domaine des maladies infectieuses, la distribution de Poisson peut être utilisée pour modéliser le nombre de cas secondaires générés par un cas primaire.
 Dans ce contexte, le paramètre est fonction du nombre effectif de réplications **R** qui représente le nombre moyen d'infections secondaires causées par chaque cas primaire au fil du temps dans une population composée d'individus sensibles et non sensibles.
 
-::: challenge \[**Exemple**\]{.underline}
+::: challenge     
+
+\[Exemple\]
 
 Supposons que l'on souhaite étudier la propagation d'une épidémie basée sur un modèle de Poisson au fur et à mesure que les jours (t) s'écoulent.
 La variable aléatoire d'intérêt est :
@@ -431,9 +435,9 @@ Avec la fonction de densité :
 
 $f(x)=\frac{Γ(x+k)}{Γ(k)Γ(x+1)} (\frac{μ}{μ+k})^x (\frac{k}{μ+k})^k,x=0,1,2...$
 
-::: challenge
+::: challenge    
 
-\[**Exemple**\]{.underline}
+\[Exemple\]
 
 Dans l'étude des maladies infectieuses, la distribution binomiale négative joue un rôle important puisqu'elle permet de modéliser la distribution du nombre de cas secondaires générés par un cas primaire, c'est-à-dire qu'elle permet de connaître la distribution du nombre de reproduction de base R\_0.
 Dans ce contexte, la moyenne de la distribution correspond à $R_0$(nombre de cas secondaires dans une population totalement sensible) et le paramètre $k$ contrôle la variation entre les cas primaires.
@@ -486,9 +490,9 @@ où p représente la probabilité de succès ou la probabilité d'occurrence de 
 
 $E(x)=\frac{1}{p}$
 
-::: challenge
+::: challenge    
 
-**Exemple**
+\[Exemple\]
 
 Si, dans le cas d'une épidémie de SRAS à Singapour en 2023, la valeur estimée de $k$ aurait été de $1$ alors la distribution des cas secondaires pourrait être modélisée par une distribution géométrique telle que sa moyenne soit égale à la valeur de $R_0$ c'est-à-dire qu'il doit être satisfait que :
 
@@ -543,9 +547,9 @@ La moyenne et la variance sont déterminées par :
 
 $E(x)=\frac{a+b}{2}$ y $V(x)=\frac{(b-a)^2}{12}$
 
-::: challenge
+::: challenge   
 
-**Exemple**
+\[Exemple\]
 
 Un chercheur souhaite simuler le comportement de COVID-19 et doit générer de manière aléatoire la valeur que peut prendre le numéro de reproduction de base. $R_0$ et l'utiliser ensuite dans son modèle de propagation.
 Pour ce faire, il suppose que le $R_0$ de COVID-19 suit une distribution uniforme entre 2 et 5 :
@@ -591,9 +595,9 @@ Cependant, il existe de nombreuses distributions normales en fonction des valeur
 
 $Z=\frac{X-μ}{σ}∼N(0,1)$
 
-::: challenge
+::: challenge   
 
-**Exemple**,
+\[Exemple\],
 
 Si l'on sait que dans une communauté, l'âge des personnes décédées du COVID-19 a une distribution normale avec une moyenne de 67,8 ans et un écart-type de 15,4 ans.
 Quelle est la probabilité qu'une personne décédée ait moins de 40 ans ?
@@ -636,9 +640,9 @@ $f(x)=\frac{1}{ xσ\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{ln(x)-u}{σ})^2}$
 
 Contrairement à la distribution normale, dans la distribution log-normale, le paramètre μ joue le rôle d'un paramètre d'échelle puisqu'il augmente la dispersion des données en augmentant leur degré d'amplitude et le paramètre σ contrôle la forme, c'est-à-dire le degré d'asymétrie.
 
-::: challenge
+::: challenge   
 
-**Exemple**
+\[Exemple\]
 
 Dans l'article de 2009 de Lessler et al., les périodes d'incubation de plusieurs agents pathogènes ont été modélisées sur la base d'une distribution log-normale.
 L'intérêt principal était d'estimer les paramètres de $(μ,σ)$.
@@ -661,7 +665,7 @@ SARS_incubation
 La distribution complète de la période d'incubation pour le SRAS peut être tracée au moyen de :
 
 ```{r}
-plot(SARS_incubacion)
+plot(SARS_incubation)
 ```
 
 Les données ci-dessus sont utiles pour répondre à des questions telles que : Quelle est la probabilité qu'un cas de SRAS développe des symptômes deux jours après l'infection ?
@@ -697,7 +701,9 @@ $Var(x)=αθ^2$
 
 Lorsque $θ$ augmente, la concentration de la probabilité se déplace vers la droite, il en va de même lorsque l'on s'attend à un plus grand nombre d'événements. $α$ Étant donné que le temps d'attente $X$ peut être plus long.
 
-::: challenge **Exemple**
+::: challenge   
+
+\[Exemple\]
 
 Une application possible de la distribution Gamma est la modélisation de l'intervalle sériel des maladies infectieuses.
 L'intervalle sériel (s) est défini comme le temps écoulé entre l'apparition des symptômes du cas primaire et l'apparition des symptômes du cas secondaire.
@@ -762,7 +768,9 @@ Le paramètre de forme $β$ est également appelé pente et tente de modéliser 
 Ainsi, lorsque $β>1$ le taux d'occurrence des événements augmente avec le temps, tandis que si $β<1$ décrit que le risque de l'événement diminue avec le temps.
 Le paramètre d'échelle gère le degré de variabilité de la distribution et se trouve dans les mêmes unités de $X$.
 
-::: challenge **Exemple**
+::: challenge   
+
+\[Exemple\]
 
 L'étude de Virlogeux et al. a décrit la distribution du temps d'incubation de la grippe à l'aide de la distribution de Weibull et a trouvé les paramètres suivants :
 
@@ -780,7 +788,7 @@ influenza_incubation <- epiparameter::epiparameter_db(
 )
 
 
-influenza_incubacion
+influenza_incubation
 
 
 ```
@@ -897,9 +905,9 @@ En général, un intervalle de confiance est construit avec les ingrédients sui
 
 $\text{Estimateur} ±(\text{coefficient de fiabilité})*(\text{erreur standard})$
 
-::: challenge
+::: challenge   
 
-**Exemple**
+\[Exemple\]
 
 Dans le paquet CFR de l'initiative Epiverse-TRACE, des informations sont disponibles sur une épidémie d'Ebola qui s'est produite en 1976 au Zaïre, aujourd'hui appelé République du Congo, documentant le nombre de cas et de décès sur une période de 73 jours.
 En fin de compte, 245 cas d'Ebola ont été signalés, dont 234 cas mortels.
@@ -999,6 +1007,7 @@ Cela s'explique par le fait que le progiciel CFR construit l'IC par la méthode 
 - Andree Valle-Campo : Modifications mineures
 - José M. Velasco-España : Editions mineures
 - Hugo Gruson: Traduction en français
+
 
 
 
