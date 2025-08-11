@@ -311,7 +311,7 @@ statistique</strong></a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Unité de statistiques et de probabilités</h1>
-        <p>Dernière mise à jour le 2025-07-24 |
+        <p>Dernière mise à jour le 2025-08-11 |
 
         <a href="https://github.com/epiverse-trace/EpiTKit-FR/edit/main/episodes/statistiques.Rmd" class="external-link">Modifier cette page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -470,8 +470,8 @@ la largeur de l’intervalle. Dans R, il peut être construit comme suit
 <span></span>
 <span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">echantillon_covid</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">age</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>   </span>
 <span>  <span class="fu">geom_histogram</span><span class="op">(</span>color<span class="op">=</span><span class="st">"darkblue"</span>, fill<span class="op">=</span><span class="st">"lightblue"</span><span class="op">)</span> <span class="op">+</span>  </span>
-<span>  <span class="fu">labs</span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Fréquence absolue"</span>, x <span class="op">=</span> <span class="st">"Âge en années"</span>,</span>
-<span>     title <span class="op">=</span> <span class="st">"Répartition par âge"</span><span class="op">)</span></span></code></pre>
+<span>  <span class="fu">labs</span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Fréquence absolue"</span>, x <span class="op">=</span> <span class="st">"Âge (en années)"</span>,</span>
+<span>       title <span class="op">=</span> <span class="st">"Répartition par âge"</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ERREUR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -481,19 +481,21 @@ la largeur de l’intervalle. Dans R, il peut être construit comme suit
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Histogramme avec densité</span></span>
-<span></span>
-<span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">echantillon_covid</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">age</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>   </span>
-<span>  <span class="fu">geom_histogram</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>y <span class="op">=</span> <span class="fu">after_stat</span><span class="op">(</span><span class="va">density</span><span class="op">)</span><span class="op">)</span>, </span>
-<span>                 color <span class="op">=</span> <span class="st">"darkblue"</span>, fill <span class="op">=</span> <span class="st">"lightblue"</span><span class="op">)</span> <span class="op">+</span>  </span>
-<span>  <span class="fu">labs</span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Density"</span>, x <span class="op">=</span> <span class="st">"Âge en années"</span>, </span>
-<span>       title <span class="op">=</span> <span class="st">"Age Distribution"</span><span class="op">)</span></span></code></pre>
+<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co"># Histogramme avec densité</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> echantillon_covid, <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span>   </span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">after_stat</span>(density)), </span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>                 <span class="at">color =</span> <span class="st">"darkblue"</span>, <span class="at">fill =</span> <span class="st">"lightblue"</span>) <span class="sc">+</span>  </span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Densité"</span>, <span class="at">x =</span> <span class="st">"Âge (en années)"</span>, </span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">""</span>Distribution de l<span class="st">'âge"")</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ERREUR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="error" tabindex="0"><code>Error in ggplot(data = echantillon_covid, aes(x = age)): could not find function "ggplot"</code></pre>
+<pre class="error" tabindex="0"><code>Error in parse(text = input): &lt;text&gt;:7:18: unexpected symbol
+6:   labs(y = "Densité", x = "Âge (en années)",
+7:        title = ""Distribution
+                    ^</code></pre>
 </div>
 <p>Ensuite, nous allons visualiser l’âge des cas COVID-19 à l’aide d’un
 diagramme en boîte.</p>
@@ -719,7 +721,7 @@ nombre d’essais indépendants n.</p>
 X~Bin(n,p)</p>
 <p>Et sa fonction de densité, sa moyenne, son espérance et sa variance
 correspondent à :</p>
-<p><span class="math inline">\(f(x)=P(X=x)=(n x )\)</span></p>
+<p><span class="math inline">\(f(x)=P(X=x)=( _nC_x )\)</span></p>
 <p><span class="math inline">\(p^x (1-p)^{(n-x)}\)</span></p>
 <p><span class="math inline">\(E(x)=np\)</span></p>
 <p><span class="math inline">\(Var(x)=np(1-p)\)</span></p>
@@ -728,8 +730,8 @@ dans une communauté de 20 individus, quelle est la probabilité que 10
 individus ou moins soient infectés dans cette communauté ?</p>
 <p>Be <span class="math inline">\(X~Bin(n=20,p=0.60)\)</span> il faut
 alors calculer l’expression suivante :</p>
-<p><span class="math inline">\(P(X≤10)=∑_(x=0)^10 (20 x ) 〖0.60〗^x
-(1-0.60)^(20-x)\)</span></p>
+<p><span class="math inline">\(P(X≤10)=∑_{(x=0)}^{10} ( _{20} C_x )
+0.60^x (1-0.60)^{(20-x)}\)</span></p>
 <p>Dans R, cette expression peut être calculée comme suit :</p>
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -747,7 +749,7 @@ alors calculer l’expression suivante :</p>
 <pre class="output" tabindex="0"><code>[1] 0.2446628</code></pre>
 </div>
 <p>Par conséquent, la probabilité qu’un maximum de 10 personnes soient
-infectées est de 24,5 %.</p>
+infectées est de 24.5 %.</p>
 <p>Sur <a href="https://ben18785.shinyapps.io/distribution-zoo/" class="external-link">distribution-zoo</a>
 vous pouvez consulter la distribution complète de la variable</p>
 <p><span class="math inline">\(X~Bin(n=20,p=0.60)\)</span>. On peut donc
@@ -816,6 +818,7 @@ différentes valeurs du nombre de nombre de reproduction (R) comme suit
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Fonction de calcul de la probabilité de Poisson</span></span>
+<span></span>
 <span><span class="va">probabilite_poisson</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">valeur1</span>, <span class="va">valeur2</span>, <span class="va">taux_reproduction</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="fu">dpois</span><span class="op">(</span><span class="va">valeur2</span>, <span class="va">taux_reproduction</span> <span class="op">*</span> <span class="va">valeur1</span><span class="op">)</span></span>
 <span><span class="op">}</span></span>
@@ -1098,7 +1101,7 @@ c’est-à-dire en <code>R</code> est résolu à l’aide du code suivant :</p>
 <div class="codewrapper">
 <h3 class="code-label">SORTIE<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] 3.164584 2.087320 2.242914 4.394300 4.563492</code></pre>
+<pre class="output" tabindex="0"><code>[1] 4.037703 2.309695 2.046667 4.363997 3.897414</code></pre>
 </div>
 </div>
 </div>
@@ -1857,8 +1860,8 @@ any links that you are not going to use.
   "url": "https://epiverse-trace.github.io/EpiTKit-FR/instructor/statistiques.html",
   "identifier": "https://epiverse-trace.github.io/EpiTKit-FR/instructor/statistiques.html",
   "dateCreated": "2024-06-04",
-  "dateModified": "2025-07-24",
-  "datePublished": "2025-08-08"
+  "dateModified": "2025-08-11",
+  "datePublished": "2025-08-11"
 }
 
   </script><script>
