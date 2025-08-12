@@ -122,7 +122,7 @@ Voici quelques exemples pour vous aider à comprendre ces concepts.
 - Veuillez tenir compte du fait que vous avez déjà suivi l'unité d'introduction sur R et
   l'unité sur la visualisation des données. Le tableau de données pour cette
   se trouve dans :
-  <https://raw.githubusercontent.com/epiverse-trace/translation-EpiTKit-FR/refs/heads/main/data/donnees_echantillon.RDS> 
+  <https://raw.githubusercontent.com/epiverse-trace/EpiTKit-FR/refs/heads/main/episodes/data/echantillon_covid.RDS> 
 
 - Une fois que vous avez téléchargé les données sur votre ordinateur et qu'elles se trouvent dans l'application
   de votre projet, vous pouvez exécuter la commande suivante :
@@ -667,7 +667,7 @@ runif(n, a, b)
 ```
 
 ``` output
-[1] 4.356102 4.622693 2.615242 4.559912 3.031367
+[1] 3.283857 4.411028 3.911273 4.707108 2.841841
 ```
 
 :::
@@ -1219,6 +1219,7 @@ Cela s'explique par le fait que le progiciel CFR construit l'IC par la méthode 
 - Andree Valle-Campo : Modifications mineures
 - José M. Velasco-España : Editions mineures
 - Hugo Gruson: Traduction en français
+
 
 
 
