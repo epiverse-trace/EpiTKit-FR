@@ -93,15 +93,35 @@ if(!require("infer")) install.packages("infer")
 # Pour installer le package cfr si vous ne l'avez pas (ou si vous n'êtes pas sûr de l'avoir), exécutez le code suivant
 
 if (!require("cfr")) install.packages("cfr")
+```
 
 
-# Avant de commencer et à chaque fois que vous démarrez une session R, chargez ces bibliothèques
-library(ggplot2)
-library(dplyr)
-library(epiparameter)
-library(epitools)
-library(infer)
-library(cfr)
+``` output
+
+Attaching package: 'dplyr'
+```
+
+``` output
+The following objects are masked from 'package:stats':
+
+    filter, lag
+```
+
+``` output
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+```
+
+``` output
+
+Attaching package: 'infer'
+```
+
+``` output
+The following object is masked from 'package:epiparameter':
+
+    generate
 ```
 
 <center>
@@ -148,9 +168,11 @@ ggplot(data = echantillon_covid, aes(x = age)) +
        title = "Répartition par âge")
 ```
 
-``` error
-Error in ggplot(data = echantillon_covid, aes(x = age)): could not find function "ggplot"
+``` output
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
+
+<img src="fig/statistiques-rendered-unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
 
 
 ``` r
@@ -181,9 +203,7 @@ ggplot(echantillon_covid, aes(x = " ", y = age)) +
   ylab("Âge (en années)") + xlab(" ")
 ```
 
-``` error
-Error in ggplot(echantillon_covid, aes(x = " ", y = age)): could not find function "ggplot"
-```
+<img src="fig/statistiques-rendered-unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 
 D'après le diagramme en boîte de l'âge de l'échantillon de cas COVID-19, il est possible de conclure que la distribution des données est positivement asymétrique, étant donné qu'il y a une plus grande proximité entre les valeurs de Q1 et la médiane, il est donc conseillé de décrire le comportement de cette dernière au moyen de la médiane et de l'intervalle interquartile, ce qui, dans R, peut être trouvé de la manière suivante en utilisant les fonctions surlignées en bleu :
 
@@ -200,8 +220,9 @@ echantillon_covid %>% dplyr::summarise(
   p75 = quantile(age, 0.75)) # 75e percentile
 ```
 
-``` error
-Error in echantillon_covid %>% dplyr::summarise(n = n(), moyenne = mean(age), : could not find function "%>%"
+``` output
+       n  moyenne       et mediane p25 p75
+1 100000 41.99912 19.51872      39  28  55
 ```
 
 Enfin, pour la variable âge, on peut conclure que la moitié des patients atteints de covid-19 sont âgés de 27 à 52 ans ("RIQ") avec une médiane de 38 ans, ce qui indique que la moitié des cas sont âgés de moins de cette valeur.
@@ -228,18 +249,14 @@ tableau <- echantillon_covid %>% # Tableau de fréquence créé
   dplyr::count(type_de_contagion) %>% # Comptage de fréquence pour la variable d'état
   dplyr::mutate(prop = base::prop.table(n), # Proportion
      	perc = base::prop.table(n)*100) # Pourcentage
-```
-
-``` error
-Error in echantillon_covid %>% dplyr::count(type_de_contagion) %>% dplyr::mutate(prop = base::prop.table(n), : could not find function "%>%"
-```
-
-``` r
 tableau
 ```
 
-``` error
-Error: object 'tableau' not found
+``` output
+  type_de_contagion     n    prop   perc
+1     Communautaire 69985 0.69985 69.985
+2           Importe    63 0.00063  0.063
+3           Inconnu 29952 0.29952 29.952
 ```
 
 Ces informations permettent de conclure que 70 % des cas de COVID-19 provenaient de la communauté et que seulement 0,06 % étaient importés d'ailleurs.
@@ -253,9 +270,7 @@ ggplot(data = tableau, aes(x = type_de_contagion, y = perc)) +
   labs(y = "%", x = " ", title = "Type de Contagion")
 ```
 
-``` error
-Error in ggplot(data = tableau, aes(x = type_de_contagion, y = perc)): could not find function "ggplot"
-```
+<img src="fig/statistiques-rendered-unnamed-chunk-9-1.png" style="display: block; margin: auto;" />
 
 <center>
 
@@ -329,13 +344,7 @@ Pour l'explication et les exemples des principales distributions, il est importa
 ``` r
 # vérifier si {epiparameter} est installé
 if(!require("epiparameter")) install.packages("epiparameter")
-```
 
-``` output
-Loading required package: epiparameter
-```
-
-``` r
 # chargez la bibliothèque epiparameter
 library(epiparameter)
 ```
@@ -406,11 +415,13 @@ Sa fonction de densité, d'espérance, de moyenne et de variance correspond à :
 $fx=P(X=x)=\frac{e^{-λ}λ^x}{x!}, x=0,1,2,..,$
 
 $E(x)=λ Var(x)=λ$
-
+ 
 Dans le domaine des maladies infectieuses, la distribution de Poisson peut être utilisée pour modéliser le nombre de cas secondaires générés par un cas primaire.
 Dans ce contexte, le paramètre est fonction du nombre effectif de réplications **R** qui représente le nombre moyen d'infections secondaires causées par chaque cas primaire au fil du temps dans une population composée d'individus sensibles et non sensibles.
 
-::: challenge \[**Exemple**\]{.underline}
+::: challenge     
+
+\[Exemple\]
 
 Supposons que l'on souhaite étudier la propagation d'une épidémie basée sur un modèle de Poisson au fur et à mesure que les jours (t) s'écoulent.
 La variable aléatoire d'intérêt est :
@@ -468,13 +479,8 @@ donnees_resultats <- data.frame(nombres_reproduction, resultats_poisson)
 nombre_reproduction_probable <- donnees_resultats %>%
   filter(resultats_poisson == max(resultats_poisson)) %>%
   pull(nombres_reproduction)
-```
 
-``` error
-Error in donnees_resultats %>% filter(resultats_poisson == max(resultats_poisson)) %>% : could not find function "%>%"
-```
 
-``` r
 # Créer le graphique avec ggplot2
 ggplot(donnees_resultats, aes(x = nombres_reproduction, y = resultats_poisson)) +
   geom_line() +
@@ -482,9 +488,15 @@ ggplot(donnees_resultats, aes(x = nombres_reproduction, y = resultats_poisson)) 
   labs(y = "Probabilité", x = "Nombre de reproduction (R)", title = "Modèle de Poisson")
 ```
 
-``` error
-Error in ggplot(donnees_resultats, aes(x = nombres_reproduction, y = resultats_poisson)): could not find function "ggplot"
+``` warning
+Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.
+This warning is displayed once every 8 hours.
+Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+generated.
 ```
+
+<img src="fig/statistiques-rendered-unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
 
 Par conséquent, si le nombre de cas secondaires se comporte selon une distribution de Poisson, il y a une forte probabilité que le nombre de nouveaux cas observés le jour 2 ait été généré avec un nombre de reproduction de R=2.
 Cela implique que le nombre moyen de cas secondaires par cas primaire est de 2.
@@ -511,9 +523,9 @@ Avec la fonction de densité :
 
 $f(x)=\frac{Γ(x+k)}{Γ(k)Γ(x+1)} (\frac{μ}{μ+k})^x (\frac{k}{μ+k})^k,x=0,1,2...$
 
-::: challenge
+::: challenge    
 
-\[**Exemple**\]{.underline}
+\[Exemple\]
 
 Dans l'étude des maladies infectieuses, la distribution binomiale négative joue un rôle important puisqu'elle permet de modéliser la distribution du nombre de cas secondaires générés par un cas primaire, c'est-à-dire qu'elle permet de connaître la distribution du nombre de reproduction de base R\_0.
 Dans ce contexte, la moyenne de la distribution correspond à $R_0$(nombre de cas secondaires dans une population totalement sensible) et le paramètre $k$ contrôle la variation entre les cas primaires.
@@ -573,7 +585,7 @@ Cette information est également disponible dans la base de données `epiparamet
 plot(SARS_R)
 ```
 
-<img src="fig/statistiques-rendered-unnamed-chunk-14-1.png" style="display: block; margin: auto;" />
+<img src="fig/statistiques-rendered-unnamed-chunk-15-1.png" style="display: block; margin: auto;" />
 
 Enfin, il est possible de conclure que la plupart des cas infectés par le SRAS ne propagent pas la maladie puisque le mode de la distribution est $0$.
 Ce résultat est attendu étant donné que $k<1$ indiquant que les cas secondaires sont générés par un petit groupe de personnes infectées et que la valeur estimée de $R_0$ varie selon les cas.
@@ -591,9 +603,9 @@ où p représente la probabilité de succès ou la probabilité d'occurrence de 
 
 $E(x)=\frac{1}{p}$
 
-::: challenge
+::: challenge    
 
-**Exemple**
+\[Exemple\]
 
 Si, dans le cas d'une épidémie de SRAS à Singapour en 2023, la valeur estimée de $k$ aurait été de $1$ alors la distribution des cas secondaires pourrait être modélisée par une distribution géométrique telle que sa moyenne soit égale à la valeur de $R_0$ c'est-à-dire qu'il doit être satisfait que :
 
@@ -626,9 +638,7 @@ ggplot(data = donnees_geom, aes(x = x, y = prob_geom)) +
   labs(y = "Probabilité", x = "Cas secondaires", title = "Distribution géométrique")
 ```
 
-``` error
-Error in ggplot(data = donnees_geom, aes(x = x, y = prob_geom)): could not find function "ggplot"
-```
+<img src="fig/statistiques-rendered-unnamed-chunk-16-1.png" style="display: block; margin: auto;" />
 
 Dans le cadre de la distribution géométrique, la probabilité qu'un cas primaire transmette le virus est plus élevée puisque la probabilité qu'un cas primaire génère 1, 2 ou plus de cas secondaires est plus élevée avec ce modèle qu'elle ne l'est avec le modèle binomial négatif.
 :::
@@ -652,9 +662,9 @@ La moyenne et la variance sont déterminées par :
 
 $E(x)=\frac{a+b}{2}$ y $V(x)=\frac{(b-a)^2}{12}$
 
-::: challenge
+::: challenge   
 
-**Exemple**
+\[Exemple\]
 
 Un chercheur souhaite simuler le comportement de COVID-19 et doit générer de manière aléatoire la valeur que peut prendre le numéro de reproduction de base. $R_0$ et l'utiliser ensuite dans son modèle de propagation.
 Pour ce faire, il suppose que le $R_0$ de COVID-19 suit une distribution uniforme entre 2 et 5 :
@@ -676,7 +686,7 @@ runif(n, a, b)
 ```
 
 ``` output
-[1] 4.037703 2.309695 2.046667 4.363997 3.897414
+[1] 2.330495 2.276137 4.467501 4.091024 2.418444
 ```
 
 :::
@@ -704,9 +714,9 @@ Cependant, il existe de nombreuses distributions normales en fonction des valeur
 
 $Z=\frac{X-μ}{σ}∼N(0,1)$
 
-::: challenge
+::: challenge   
 
-**Exemple**,
+\[Exemple\],
 
 Si l'on sait que dans une communauté, l'âge des personnes décédées du COVID-19 a une distribution normale avec une moyenne de 67,8 ans et un écart-type de 15,4 ans.
 Quelle est la probabilité qu'une personne décédée ait moins de 40 ans ?
@@ -753,9 +763,9 @@ $f(x)=\frac{1}{ xσ\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{ln(x)-u}{σ})^2}$
 
 Contrairement à la distribution normale, dans la distribution log-normale, le paramètre μ joue le rôle d'un paramètre d'échelle puisqu'il augmente la dispersion des données en augmentant leur degré d'amplitude et le paramètre σ contrôle la forme, c'est-à-dire le degré d'asymétrie.
 
-::: challenge
+::: challenge   
 
-**Exemple**
+\[Exemple\]
 
 Dans l'article de 2009 de Lessler et al., les périodes d'incubation de plusieurs agents pathogènes ont été modélisées sur la base d'une distribution log-normale.
 L'intérêt principal était d'estimer les paramètres de $(μ,σ)$.
@@ -805,12 +815,10 @@ La distribution complète de la période d'incubation pour le SRAS peut être tr
 
 
 ``` r
-plot(SARS_incubacion)
+plot(SARS_incubation)
 ```
 
-``` error
-Error: object 'SARS_incubacion' not found
-```
+<img src="fig/statistiques-rendered-unnamed-chunk-20-1.png" style="display: block; margin: auto;" />
 
 Les données ci-dessus sont utiles pour répondre à des questions telles que : Quelle est la probabilité qu'un cas de SRAS développe des symptômes deux jours après l'infection ?
 
@@ -849,7 +857,9 @@ $Var(x)=αθ^2$
 
 Lorsque $θ$ augmente, la concentration de la probabilité se déplace vers la droite, il en va de même lorsque l'on s'attend à un plus grand nombre d'événements. $α$ Étant donné que le temps d'attente $X$ peut être plus long.
 
-::: challenge **Exemple**
+::: challenge   
+
+\[Exemple\]
 
 Une application possible de la distribution Gamma est la modélisation de l'intervalle sériel des maladies infectieuses.
 L'intervalle sériel (s) est défini comme le temps écoulé entre l'apparition des symptômes du cas primaire et l'apparition des symptômes du cas secondaire.
@@ -905,7 +915,7 @@ Parameters:
 plot(influenza_s)
 ```
 
-<img src="fig/statistiques-rendered-unnamed-chunk-22-1.png" style="display: block; margin: auto;" />
+<img src="fig/statistiques-rendered-unnamed-chunk-23-1.png" style="display: block; margin: auto;" />
 
 Avec ces informations, la moyenne et l'écart-type de la distribution peuvent être trouvés sur la base de l'application de la distribution gamma :
 
@@ -947,7 +957,9 @@ Le paramètre de forme $β$ est également appelé pente et tente de modéliser 
 Ainsi, lorsque $β>1$ le taux d'occurrence des événements augmente avec le temps, tandis que si $β<1$ décrit que le risque de l'événement diminue avec le temps.
 Le paramètre d'échelle gère le degré de variabilité de la distribution et se trouve dans les mêmes unités de $X$.
 
-::: challenge **Exemple**
+::: challenge   
+
+\[Exemple\]
 
 L'étude de Virlogeux et al. a décrit la distribution du temps d'incubation de la grippe à l'aide de la distribution de Weibull et a trouvé les paramètres suivants :
 
@@ -975,11 +987,22 @@ To retrieve the citation use the 'get_citation' function
 ```
 
 ``` r
-influenza_incubacion
+influenza_incubation
 ```
 
-``` error
-Error: object 'influenza_incubacion' not found
+``` output
+Disease: Influenza
+Pathogen: Influenza-A-H7N9
+Epi Parameter: incubation period
+Study: Virlogeux V, Li M, Tsang T, Feng L, Fang V, Jiang H, Wu P, Zheng J, Lau
+E, Cao Y, Qin Y, Liao Q, Yu H, Cowling B (2015). "Estimating the
+Distribution of the Incubation Periods of Human Avian Influenza A(H7N9)
+Virus Infections." _American Journal of Epidemiology_.
+doi:10.1093/aje/kwv115 <https://doi.org/10.1093/aje/kwv115>.
+Distribution: weibull (days)
+Parameters:
+  shape: 2.101
+  scale: 3.839
 ```
 
 
@@ -989,7 +1012,7 @@ Error: object 'influenza_incubacion' not found
 plot(influenza_incubation)
 ```
 
-<img src="fig/statistiques-rendered-unnamed-chunk-25-1.png" style="display: block; margin: auto;" />
+<img src="fig/statistiques-rendered-unnamed-chunk-26-1.png" style="display: block; margin: auto;" />
 
 :::
 
@@ -1017,20 +1040,6 @@ Comme le montre la figure ci-dessous, les CFR estimés lorsque la taille de l'é
 
 ``` r
 library(infer)
-```
-
-``` output
-
-Attaching package: 'infer'
-```
-
-``` output
-The following object is masked from 'package:epiparameter':
-
-    generate
-```
-
-``` r
 # Définir la graine aléatoire pour la reproductibilité
 set.seed(200)  
 
@@ -1048,13 +1057,8 @@ samples_n5 <- population %>%
 cfr_n5 <- samples_n5 %>%  
   group_by(replicate) %>%  
   summarise(cfr = mean(dead))  
-```
 
-``` error
-Error in summarise(., cfr = mean(dead)): could not find function "summarise"
-```
 
-``` r
 # Échantillon de taille 10 : Tirer 100 échantillons aléatoires de taille 10 (sans remplacement)
 samples_n10 <- population %>%  
   rep_sample_n(size = 10, reps = 100, replace = FALSE)  
@@ -1064,23 +1068,13 @@ samples_n10 <- population %>%
 cfr_n10 <- samples_n10 %>%  
   group_by(replicate) %>%  
   summarise(cfr = mean(dead))  
-```
 
-``` error
-Error in summarise(., cfr = mean(dead)): could not find function "summarise"
-```
 
-``` r
 # Combiner les résultats des deux tailles d'échantillons (5 et 10)
 cfr <- bind_rows(cfr_n5, cfr_n10) %>%  
   mutate(size = factor(c(rep(5, 100), rep(10, 100))))  
-```
 
-``` error
-Error in mutate(., size = factor(c(rep(5, 100), rep(10, 100)))): could not find function "mutate"
-```
 
-``` r
 # Tracer la distribution d'échantillonnage des estimations du CFR en utilisant un boxplot
 ggplot(cfr, aes(x = size, y = cfr, fill = size)) +  
   geom_boxplot(show.legend = FALSE) +  # Créer un boxplot sans légende
@@ -1089,9 +1083,7 @@ ggplot(cfr, aes(x = size, y = cfr, fill = size)) +
   scale_fill_brewer(palette = "Blues")  # Utiliser une palette de couleurs bleues pour la visualisation
 ```
 
-``` error
-Error in ggplot(cfr, aes(x = size, y = cfr, fill = size)): could not find function "ggplot"
-```
+<img src="fig/statistiques-rendered-unnamed-chunk-27-1.png" style="display: block; margin: auto;" />
 
 Si nous calculons la moyenne et l'écart-type des valeurs estimées du CFR avec les échantillons de taille 5 et 10, nous constatons que l'écart-type des estimations est effectivement plus petit avec l'augmentation de la taille de l'échantillon, mais dans les deux cas, en moyenne, les échantillons étaient plus proches de la vraie valeur du paramètre de 0,20. 
 
@@ -1111,8 +1103,12 @@ cfr %>%
   )
 ```
 
-``` error
-Error in summarise(., moyenne = mean(cfr), et = sd(cfr), médiane = median(cfr), : could not find function "summarise"
+``` output
+# A tibble: 2 × 6
+  size  moyenne    et médiane   p25   p75
+  <fct>   <dbl> <dbl>   <dbl> <dbl> <dbl>
+1 5       0.208 0.180     0.2   0     0.4
+2 10      0.197 0.116     0.2   0.1   0.3
 ```
 
 Mais si, dans la réalité, nous ne pouvons prendre qu'un seul échantillon aléatoire, cela signifie que nous n'aurons qu'une seule chance de calculer une statistique qui sera la **estimateur ponctuel**du paramètre.
@@ -1131,9 +1127,9 @@ En général, un intervalle de confiance est construit avec les ingrédients sui
 
 $\text{Estimateur} ±(\text{coefficient de fiabilité})*(\text{erreur standard})$
 
-::: challenge
+::: challenge   
 
-**Exemple**
+\[Exemple\]
 
 Dans le paquet CFR de l'initiative Epiverse-TRACE, des informations sont disponibles sur une épidémie d'Ebola qui s'est produite en 1976 au Zaïre, aujourd'hui appelé République du Congo, documentant le nombre de cas et de décès sur une période de 73 jours.
 En fin de compte, 245 cas d'Ebola ont été signalés, dont 234 cas mortels.
@@ -1164,13 +1160,8 @@ Comme vous l'avez remarqué jusqu'à présent, ce pas-à-pas peut devenir lourd 
 ``` r
 # Télécharger les données sur l'épidémie d'Ebola de 1976
 data(ebola1976)  
-```
 
-``` warning
-Warning in data(ebola1976): data set 'ebola1976' not found
-```
 
-``` r
 # Calculer les statistiques clés liées au taux de létalité (CFR)
 cfr_summary <- ebola1976 %>%  
   summarise(  
@@ -1181,19 +1172,15 @@ cfr_summary <- ebola1976 %>%
 	lim_inf = cfr_est - 1.96 * error,  # Limite inférieure de l'intervalle de confiance à 95 %  
 	lim_sup = cfr_est + 1.96 * error  # Limite supérieure de l'intervalle de confiance à 95 %  
   )  
-```
 
-``` error
-Error in summarise(., n = sum(cases), deces = sum(deaths), cfr_est = deces/n, : could not find function "summarise"
-```
 
-``` r
 # Afficher le résultat
 print(cfr_summary)
 ```
 
-``` error
-Error: object 'cfr_summary' not found
+``` output
+    n deces  cfr_est      error   lim_inf   lim_sup
+1 245   234 0.955102 0.01322986 0.9291715 0.9810326
 ```
 
 :::
@@ -1209,8 +1196,9 @@ Le progiciel CFR dispose également d'une fonction intégrée permettant d'estim
 cfr::cfr_static(data = ebola1976)
 ```
 
-``` error
-Error: object 'ebola1976' not found
+``` output
+  severity_estimate severity_low severity_high
+1          0.955102    0.9210866     0.9773771
 ```
 
 Comme vous pouvez le constater, il existe de légères différences entre l'IC construit pas à pas et celui rapporté par la fonction `cfr_static`.
@@ -1250,6 +1238,7 @@ Cela s'explique par le fait que le progiciel CFR construit l'IC par la méthode 
 - Andree Valle-Campo : Modifications mineures
 - José M. Velasco-España : Editions mineures
 - Hugo Gruson: Traduction en français
+
 
 
 
