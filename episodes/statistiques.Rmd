@@ -95,7 +95,7 @@ if(!require("infer")) install.packages("infer")
 if (!require("cfr")) install.packages("cfr")
 ```
 
-```{r include=TRUE, echo=FALSE}
+```{r include=F, echo=T}
 
 # Avant de commencer et à chaque fois que vous démarrez une session R, chargez ces bibliothèques
 library(ggplot2)
@@ -1007,6 +1007,7 @@ Cela s'explique par le fait que le progiciel CFR construit l'IC par la méthode 
 - Andree Valle-Campo : Modifications mineures
 - José M. Velasco-España : Editions mineures
 - Hugo Gruson: Traduction en français
+
 
 
 
