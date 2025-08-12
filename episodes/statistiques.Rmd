@@ -95,7 +95,7 @@ if(!require("infer")) install.packages("infer")
 if (!require("cfr")) install.packages("cfr")
 ```
 
-```{r include=TRUE, echo=FALSE}
+```{r message=FALSE}
 
 # Avant de commencer et à chaque fois que vous démarrez une session R, chargez ces bibliothèques
 library(ggplot2)
@@ -157,7 +157,7 @@ ggplot(data = echantillon_covid, aes(x = age)) +
   geom_histogram(aes(y = after_stat(density)), 
                  color = "darkblue", fill = "lightblue") +  
   labs(y = "Densité", x = "Âge (en années)", 
-       title = ""Distribution de l'âge"")
+       title = "Distribution de l'âge")
 
 
 ```
@@ -1007,6 +1007,7 @@ Cela s'explique par le fait que le progiciel CFR construit l'IC par la méthode 
 - Andree Valle-Campo : Modifications mineures
 - José M. Velasco-España : Editions mineures
 - Hugo Gruson: Traduction en français
+
 
 
 
