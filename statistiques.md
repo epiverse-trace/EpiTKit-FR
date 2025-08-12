@@ -96,32 +96,14 @@ if (!require("cfr")) install.packages("cfr")
 ```
 
 
-``` output
-
-Attaching package: 'dplyr'
-```
-
-``` output
-The following objects are masked from 'package:stats':
-
-    filter, lag
-```
-
-``` output
-The following objects are masked from 'package:base':
-
-    intersect, setdiff, setequal, union
-```
-
-``` output
-
-Attaching package: 'infer'
-```
-
-``` output
-The following object is masked from 'package:epiparameter':
-
-    generate
+``` r
+# Avant de commencer et à chaque fois que vous démarrez une session R, chargez ces bibliothèques
+library(ggplot2)
+library(dplyr)
+library(epiparameter)
+library(epitools)
+library(infer)
+library(cfr)
 ```
 
 <center>
@@ -182,15 +164,14 @@ ggplot(data = echantillon_covid, aes(x = age)) +
   geom_histogram(aes(y = after_stat(density)), 
                  color = "darkblue", fill = "lightblue") +  
   labs(y = "Densité", x = "Âge (en années)", 
-       title = ""Distribution de l'âge"")
+       title = "Distribution de l'âge")
 ```
 
-``` error
-Error in parse(text = input): <text>:7:18: unexpected symbol
-6:   labs(y = "Densité", x = "Âge (en années)", 
-7:        title = ""Distribution
-                    ^
+``` output
+`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
+
+<img src="fig/statistiques-rendered-unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 Ensuite, nous allons visualiser l'âge des cas COVID-19 à l'aide d'un diagramme en boîte.
 
@@ -686,7 +667,7 @@ runif(n, a, b)
 ```
 
 ``` output
-[1] 2.330495 2.276137 4.467501 4.091024 2.418444
+[1] 4.356102 4.622693 2.615242 4.559912 3.031367
 ```
 
 :::
@@ -1238,6 +1219,7 @@ Cela s'explique par le fait que le progiciel CFR construit l'IC par la méthode 
 - Andree Valle-Campo : Modifications mineures
 - José M. Velasco-España : Editions mineures
 - Hugo Gruson: Traduction en français
+
 
 
 
