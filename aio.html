@@ -450,38 +450,17 @@ cas, exécutez le code ci-dessous en fonction de vos besoins :</p>
 <span></span>
 <span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw">require</span><span class="op">(</span><span class="st">"cfr"</span><span class="op">)</span><span class="op">)</span> <span class="fu">install.packages</span><span class="op">(</span><span class="st">"cfr"</span><span class="op">)</span></span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">SORTIE<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>
-Attaching package: 'dplyr'</code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">SORTIE<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>The following objects are masked from 'package:stats':
-
-    filter, lag</code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">SORTIE<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>The following objects are masked from 'package:base':
-
-    intersect, setdiff, setequal, union</code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">SORTIE<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>
-Attaching package: 'infer'</code></pre>
-</div>
-<div class="codewrapper">
-<h3 class="code-label">SORTIE<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>The following object is masked from 'package:epiparameter':
-
-    generate</code></pre>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Avant de commencer et à chaque fois que vous démarrez une session R, chargez ces bibliothèques</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">dplyr</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">epiparameter</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">epitools</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">infer</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">cfr</span><span class="op">)</span></span></code></pre>
 </div>
 <center>
 <p><a href="https://epiverse-trace.github.io/EpiTKit-FR/Banco_erreurs.html" class="external-link"><img src="fig/dudas.png" width="100" class="figure"></a></p>
@@ -503,7 +482,7 @@ tableau de données pour cette se trouve dans : <a href="https://raw.githubuserc
 ordinateur et qu’elles se trouvent dans l’application de votre projet,
 vous pouvez exécuter la commande suivante :</p></li>
 </ul>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -521,7 +500,7 @@ fréquence relative ou la densité sur l’axe des y. Un histogramme de
 densité ajuste la fréquence relative de chaque intervalle en fonction de
 la largeur de l’intervalle. Dans R, il peut être construit comme suit
 :</p>
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -537,28 +516,26 @@ la largeur de l’intervalle. Dans R, il peut être construit comme suit
 </h3>
 <pre class="output" tabindex="0"><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
-<figure><img src="fig/statistiques-rendered-unnamed-chunk-4-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb10">
+<figure><img src="fig/statistiques-rendered-unnamed-chunk-4-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="co"># Histogramme avec densité</span></span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> echantillon_covid, <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span>   </span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">after_stat</span>(density)), </span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a>                 <span class="at">color =</span> <span class="st">"darkblue"</span>, <span class="at">fill =</span> <span class="st">"lightblue"</span>) <span class="sc">+</span>  </span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Densité"</span>, <span class="at">x =</span> <span class="st">"Âge (en années)"</span>, </span>
-<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">""</span>Distribution de l<span class="st">'âge"")</span></span></code></pre>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Histogramme avec densité</span></span>
+<span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span>data <span class="op">=</span> <span class="va">echantillon_covid</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">age</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>   </span>
+<span>  <span class="fu">geom_histogram</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>y <span class="op">=</span> <span class="fu">after_stat</span><span class="op">(</span><span class="va">density</span><span class="op">)</span><span class="op">)</span>, </span>
+<span>                 color <span class="op">=</span> <span class="st">"darkblue"</span>, fill <span class="op">=</span> <span class="st">"lightblue"</span><span class="op">)</span> <span class="op">+</span>  </span>
+<span>  <span class="fu">labs</span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Densité"</span>, x <span class="op">=</span> <span class="st">"Âge (en années)"</span>, </span>
+<span>       title <span class="op">=</span> <span class="st">"Distribution de l'âge"</span><span class="op">)</span></span></code></pre>
 </div>
 <div class="codewrapper">
-<h3 class="code-label">ERREUR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">SORTIE<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="error" tabindex="0"><code>Error in parse(text = input): &lt;text&gt;:7:18: unexpected symbol
-6:   labs(y = "Densité", x = "Âge (en années)",
-7:        title = ""Distribution
-                    ^</code></pre>
+<pre class="output" tabindex="0"><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
-<p>Ensuite, nous allons visualiser l’âge des cas COVID-19 à l’aide d’un
+<figure><img src="fig/statistiques-rendered-unnamed-chunk-5-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>Ensuite, nous allons visualiser l’âge des cas COVID-19 à l’aide d’un
 diagramme en boîte.</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -575,7 +552,7 @@ proximité entre les valeurs de Q1 et la médiane, il est donc conseillé
 de décrire le comportement de cette dernière au moyen de la médiane et
 de l’intervalle interquartile, ce qui, dans R, peut être trouvé de la
 manière suivante en utilisant les fonctions surlignées en bleu :</p>
-<div class="codewrapper sourceCode" id="cb13">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -613,7 +590,7 @@ c’est-à-dire qu’il est toujours nécessaire d’évaluer d’abord le table
 de fréquence de la variable. Supposons que nous voulions connaître le
 type d’infection de COVID-19. Cela peut être fait dans R à l’aide de la
 commande suivante :</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -637,7 +614,7 @@ commande suivante :</p>
 provenaient de la communauté et que seulement 0,06 % étaient importés
 d’ailleurs. Ce résultat peut être visualisé à l’aide d’un diagramme à
 barres :</p>
-<div class="codewrapper sourceCode" id="cb17">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -677,7 +654,7 @@ ou moins, avec un intervalle de confiance à 95 % de 1,13 à 1,27, et une
 valeur p inférieure à 0,01. Pour reproduire ce calcul, vous pouvez
 utiliser la fonction<strong>epitools</strong> comme indiqué
 ci-dessous.</p>
-<div class="codewrapper sourceCode" id="cb18">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -734,7 +711,7 @@ d’échantillonnage.</p>
 <p>Pour l’explication et les exemples des principales distributions, il
 est important que vous installiez et chargiez les paquets
 <strong>epiparameter</strong> d’Epiverse.</p>
-<div class="codewrapper sourceCode" id="cb20">
+<div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -773,7 +750,7 @@ alors calculer l’expression suivante :</p>
 <p><span class="math inline">\(P(X≤10)=∑_{(x=0)}^{10} ( _{20} C_x )
 0.60^x (1-0.60)^{(20-x)}\)</span></p>
 <p>Dans R, cette expression peut être calculée comme suit :</p>
-<div class="codewrapper sourceCode" id="cb21">
+<div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -860,7 +837,7 @@ jour 2, c’est-à-dire</p>
 <p><strong>Dans R, nous pourrions découvrir cela en faisant varier
 différentes valeurs du nombre de nombre de reproduction (R) comme suit
 :</strong></p>
-<div class="codewrapper sourceCode" id="cb23">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -972,7 +949,7 @@ dans le <code>epiparameter</code> qui est un paquet disponible à
 l’adresse <code>R</code> qui compile les principales estimations de
 plusieurs paramètres épidémiologiques d’intérêt pour l’étude des
 maladies infectieuses.</p>
-<div class="codewrapper sourceCode" id="cb25">
+<div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -991,7 +968,7 @@ the effect of individual variation on disease emergence." _Nature_.
 doi:10.1038/nature04153 &lt;https://doi.org/10.1038/nature04153&gt;..
 To retrieve the citation use the 'get_citation' function</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb27">
+<div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1017,7 +994,7 @@ du nombre de cas secondaires de SRAS afin de suggérer des mesures de
 contrôle. Cette information est également disponible dans la base de
 données <code>epiparameter</code> avec la fonction
 <code>plot</code>.</p>
-<div class="codewrapper sourceCode" id="cb29">
+<div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1064,7 +1041,7 @@ comme suit :</p>
 <p><span class="math inline">\(X \sim Geom(p=0.613)\)</span></p>
 <p>Dans R, nous pourrions simuler le comportement du nombre de cas
 secondaires avec le code suivant :</p>
-<div class="codewrapper sourceCode" id="cb30">
+<div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1126,7 +1103,7 @@ une distribution uniforme entre 2 et 5 :</p>
 <p>Pour votre simulation, vous devez générer cinq valeurs possibles de
 <span class="math inline">\(R_0\)</span> avec la même probabilité,
 c’est-à-dire en <code>R</code> est résolu à l’aide du code suivant :</p>
-<div class="codewrapper sourceCode" id="cb31">
+<div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1142,7 +1119,7 @@ c’est-à-dire en <code>R</code> est résolu à l’aide du code suivant :</p>
 <div class="codewrapper">
 <h3 class="code-label">SORTIE<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] 2.330495 2.276137 4.467501 4.091024 2.418444</code></pre>
+<pre class="output" tabindex="0"><code>[1] 4.356102 4.622693 2.615242 4.559912 3.031367</code></pre>
 </div>
 </div>
 </div>
@@ -1199,7 +1176,7 @@ décédés de COVID-19.</p>
 <p>Dans R, nous pouvons utiliser la fonction <code>pnorm()</code> comme
 suit pour trouver :</p>
 <p><span class="math inline">\(P(X&lt;40)=?\)</span></p>
-<div class="codewrapper sourceCode" id="cb33">
+<div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1259,7 +1236,7 @@ paramètres de <span class="math inline">\((μ,σ)\)</span>. Par exemple,
 dans le cas du SRAS, on a trouvé une estimation de <span class="math inline">\(μ=0.660\)</span>, y <span class="math inline">\(σ=1.205\)</span> ce qui implique qu’en moyenne, un
 cas infecté développe des symptômes en 0,7 jour. Cette information peut
 être obtenue dans le paquet epiparameter avec la commande suivante :</p>
-<div class="codewrapper sourceCode" id="cb35">
+<div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1280,7 +1257,7 @@ doi:10.1016/S1473-3099(09)70069-8
 &lt;https://doi.org/10.1016/S1473-3099%2809%2970069-8&gt;..
 To retrieve the citation use the 'get_citation' function</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb37">
+<div class="codewrapper sourceCode" id="cb33">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1305,7 +1282,7 @@ Parameters:
 </div>
 <p>La distribution complète de la période d’incubation pour le SRAS peut
 être tracée au moyen de :</p>
-<div class="codewrapper sourceCode" id="cb39">
+<div class="codewrapper sourceCode" id="cb35">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1314,7 +1291,7 @@ Parameters:
 <figure><img src="fig/statistiques-rendered-unnamed-chunk-20-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>Les données ci-dessus sont utiles pour répondre à des questions
 telles que : Quelle est la probabilité qu’un cas de SRAS développe des
 symptômes deux jours après l’infection ?</p>
-<div class="codewrapper sourceCode" id="cb40">
+<div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1373,7 +1350,7 @@ distribution gamma et a trouvé les paramètres suivants :</p>
 <p><span class="math inline">\(s ∼Gamma( α=2.622,θ=0.957)\)</span></p>
 <p>Ces informations peuvent également être obtenues dans le paquet
 <code>epiparameter</code> avec la commande suivante :</p>
-<div class="codewrapper sourceCode" id="cb42">
+<div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1395,7 +1372,7 @@ _PLoS Currents_. doi:10.1371/currents.RRN1130
 &lt;https://doi.org/10.1371/currents.RRN1130&gt;..
 To retrieve the citation use the 'get_citation' function</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb44">
+<div class="codewrapper sourceCode" id="cb40">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1419,7 +1396,7 @@ Parameters:
   shape: 2.622
   scale: 0.957</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb46">
+<div class="codewrapper sourceCode" id="cb42">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1428,7 +1405,7 @@ Parameters:
 <figure><img src="fig/statistiques-rendered-unnamed-chunk-23-1.png" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>Avec ces informations, la moyenne et l’écart-type de la distribution
 peuvent être trouvés sur la base de l’application de la distribution
 gamma :</p>
-<div class="codewrapper sourceCode" id="cb47">
+<div class="codewrapper sourceCode" id="cb43">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1488,7 +1465,7 @@ trouvé les paramètres suivants :</p>
 <p><span class="math inline">\(x∼Gamma( β=2.101,η=3.839)\)</span></p>
 <p>Cette information peut également être obtenue dans le package
 epiparameter avec la commande suivante :</p>
-<div class="codewrapper sourceCode" id="cb49">
+<div class="codewrapper sourceCode" id="cb45">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1509,7 +1486,7 @@ Virus Infections." _American Journal of Epidemiology_.
 doi:10.1093/aje/kwv115 &lt;https://doi.org/10.1093/aje/kwv115&gt;..
 To retrieve the citation use the 'get_citation' function</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb51">
+<div class="codewrapper sourceCode" id="cb47">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1531,7 +1508,7 @@ Parameters:
   shape: 2.101
   scale: 3.839</code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb53">
+<div class="codewrapper sourceCode" id="cb49">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1575,7 +1552,7 @@ R et en sélectionnant 1000 échantillons de taille 5 et 10,
 respectivement. Comme le montre la figure ci-dessous, les CFR estimés
 lorsque la taille de l’échantillon passe de 5 à 10 sont plus similaires
 avec un RIQ plus faible.</p>
-<div class="codewrapper sourceCode" id="cb54">
+<div class="codewrapper sourceCode" id="cb50">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1628,7 +1605,7 @@ l’écart-type des estimations est effectivement plus petit avec
 l’augmentation de la taille de l’échantillon, mais dans les deux cas, en
 moyenne, les échantillons étaient plus proches de la vraie valeur du
 paramètre de 0,20.</p>
-<div class="codewrapper sourceCode" id="cb55">
+<div class="codewrapper sourceCode" id="cb51">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1719,7 +1696,7 @@ manière plus rapide et plus efficace comme suit :</p>
 <p>Comme vous l’avez remarqué jusqu’à présent, ce pas-à-pas peut devenir
 lourd à cause des calculs, mais en R, nous pouvons obtenir tout cela
 d’une manière plus rapide et plus efficace de la façon suivante :</p>
-<div class="codewrapper sourceCode" id="cb57">
+<div class="codewrapper sourceCode" id="cb53">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1757,7 +1734,7 @@ Congo est contenu dans l’intervalle entre 92,9 % et 98,1 %.</p>
 <p>Le progiciel CFR dispose également d’une fonction intégrée permettant
 d’estimer automatiquement le CFR au cours d’une épidémie, avec son
 intervalle de confiance respectif de 95 %, au moyen de la fonction :</p>
-<div class="codewrapper sourceCode" id="cb59">
+<div class="codewrapper sourceCode" id="cb55">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
