@@ -123,7 +123,7 @@ Voici quelques exemples pour vous aider à comprendre ces concepts.
 - Veuillez tenir compte du fait que vous avez déjà suivi l'unité d'introduction sur R et
   l'unité sur la visualisation des données. Le tableau de données pour cette
   se trouve dans :
-  <https://raw.githubusercontent.com/epiverse-trace/translation-EpiTKit-FR/refs/heads/main/data/donnees_echantillon.RDS> 
+  <https://raw.githubusercontent.com/epiverse-trace/EpiTKit-FR/refs/heads/main/episodes/data/echantillon_covid.RDS> 
 
 - Une fois que vous avez téléchargé les données sur votre ordinateur et qu'elles se trouvent dans l'application
   de votre projet, vous pouvez exécuter la commande suivante :
@@ -1007,6 +1007,7 @@ Cela s'explique par le fait que le progiciel CFR construit l'IC par la méthode 
 - Andree Valle-Campo : Modifications mineures
 - José M. Velasco-España : Editions mineures
 - Hugo Gruson: Traduction en français
+
 
 
 
