@@ -314,6 +314,8 @@ Formule nécessaire pour estimer $R_0$:
 
 $$ R_0 = \frac{mb^2 p_h p_v \delta}{\mu_v (\mu_v+\delta)(\mu_h+\gamma)} $$
 
+## 6\.4 Équations du modèle Zika en R
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 **Instruction** Traduire les équations en R
@@ -340,9 +342,12 @@ Vous commencez par créer la fonction (qui sera ensuite utilisée dans l'argumen
 Pour ce faire, il faut traduire les équations du modèle Zika en **R**.
 Vous trouverez ci-dessous la fonction déjà construite `modelo_zika` pour remplacer les équations que vous avez déjà remplies ci-dessus.
 
+## 6\.5 Modèle Zika en R
+
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
-### Défi 3
+### Défi 
 
 **Instruction** Instruction : Remplacez les équations incomplètes du code suivant par les équations complètes du modèle Zika sur lequel vous avez travaillé dans l'instruction précédente.
 
