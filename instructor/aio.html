@@ -1803,7 +1803,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-modele_deterministe"><p>Content from <a href="modele_deterministe.html">Construction d'un modèle déterministe simple</a></p>
 <hr>
-<p>Dernière mise à jour le 2025-07-29 |
+<p>Dernière mise à jour le 2025-10-17 |
 
         <a href="https://github.com/epiverse-trace/EpiTKit-FR/edit/main/episodes/modele_deterministe.Rmd" class="external-link">Modifier cette page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Durée estimée : <i aria-hidden="true" data-feather="clock"></i> 128 minutes</p>
@@ -2049,7 +2049,7 @@ précédemment et entrez la valeur de chacun de ces paramètres.</p>
   Solution 1
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2172,6 +2172,9 @@ I_v\]</span></p>
 <p>Formule nécessaire pour estimer <span class="math inline">\(R_0\)</span>:</p>
 <p><span class="math display">\[ R_0 = \frac{mb^2 p_h p_v \delta}{\mu_v
 (\mu_v+\delta)(\mu_h+\gamma)} \]</span></p>
+</section><section><h2 class="section-heading" id="équations-du-modèle-zika-en-r">6.4 Équations du modèle Zika en R<a class="anchor" aria-label="anchor" href="#%C3%A9quations-du-mod%C3%A8le-zika-en-r"></a>
+</h2>
+<hr class="half-width">
 <div id="discussion2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -2204,12 +2207,15 @@ l’argument <strong>fun</strong>). Pour ce faire, il faut traduire les
 équations du modèle Zika en <strong>R</strong>. Vous trouverez
 ci-dessous la fonction déjà construite <code>modelo_zika</code> pour
 remplacer les équations que vous avez déjà remplies ci-dessus.</p>
-<div id="défi-3" class="callout discussion">
+</section><section><h2 class="section-heading" id="modèle-zika-en-r">6.5 Modèle Zika en R<a class="anchor" aria-label="anchor" href="#mod%C3%A8le-zika-en-r"></a>
+</h2>
+<hr class="half-width">
+<div id="défi" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="défi-3" class="callout-inner">
-<h3 class="callout-title">Défi 3</h3>
+<div id="défi" class="callout-inner">
+<h3 class="callout-title">Défi</h3>
 <div class="callout-content">
 <p><strong>Instruction</strong> Instruction : Remplacez les équations
 incomplètes du code suivant par les équations complètes du modèle Zika
@@ -2248,7 +2254,7 @@ sur lequel vous avez travaillé dans l’instruction précédente.</p>
   Solution 3
   </h3>
 </button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
+<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2379,7 +2385,7 @@ appris dans le didacticiel.</p>
   Solution 5
   </h3>
 </button>
-<div id="collapseInstructor3" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor3" aria-labelledby="headingInstructor3">
+<div id="collapseInstructor3" class="accordion-collapse collapse" aria-labelledby="headingInstructor3" data-bs-parent="#accordionInstructor3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2448,7 +2454,7 @@ que vous avez appris jusqu’à présent.</p>
   Solution 6
   </h3>
 </button>
-<div id="collapseInstructor4" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor4" aria-labelledby="headingInstructor4">
+<div id="collapseInstructor4" class="accordion-collapse collapse" aria-labelledby="headingInstructor4" data-bs-parent="#accordionInstructor4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2518,7 +2524,7 @@ départ) de sorte que Ih = 1 et Sh = Nh - 1.</p>
   Solution
   </h3>
 </button>
-<div id="collapseInstructor5" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor5" aria-labelledby="headingInstructor5">
+<div id="collapseInstructor5" class="accordion-collapse collapse" aria-labelledby="headingInstructor5" data-bs-parent="#accordionInstructor5">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3904,8 +3910,8 @@ any links that you are not going to use.
   "url": "https://epiverse-trace.github.io/EpiTKit-FR/instructor/aio.html",
   "identifier": "https://epiverse-trace.github.io/EpiTKit-FR/instructor/aio.html",
   "dateCreated": "2024-06-04",
-  "dateModified": "2025-10-14",
-  "datePublished": "2025-10-14"
+  "dateModified": "2025-10-17",
+  "datePublished": "2025-10-17"
 }
 
   </script><script>
